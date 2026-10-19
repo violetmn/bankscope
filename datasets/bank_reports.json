@@ -1,0 +1,20 @@
+{
+  "description": "Historical bank reports for local research; PDFs retain publisher terms and are not redistributed in this repository.",
+  "source_page": "https://www.jpmorganchase.com/ir/annual-report",
+  "documents": [
+    {
+      "doc_id": "JPMORGANCHASE_2023_ANNUAL",
+      "company": "JPMorgan Chase",
+      "year": 2023,
+      "split": "development",
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/annualreport-2023.pdf"
+    },
+    {
+      "doc_id": "JPMORGANCHASE_2022_ANNUAL",
+      "company": "JPMorgan Chase",
+      "year": 2022,
+      "split": "report_transfer_test",
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/annualreport-2022.pdf"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-19",
+  "development_document": "JPMORGANCHASE_2023_ANNUAL",
+  "test_document": "JPMORGANCHASE_2022_ANNUAL",
+  "file": "bankscope/segment_tables.py",
+  "sha256": "2c46074179ea54340de353b2409833e0e9e6eb24e2527a26ae1647485f4f0457",
+  "policy": "No adapter changes after first test-report run. Later fixes require reporting that this test became development data."
+}

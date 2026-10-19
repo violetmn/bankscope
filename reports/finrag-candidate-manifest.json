@@ -1,0 +1,51 @@
+{
+  "source": "https://github.com/Lsilotto/FinRAG-QA",
+  "source_file_sha256": "ffb2d0100a02a104458ae07e700c11635a3066701af642140606ce799571a5f0",
+  "source_rows": 999,
+  "eligible_rows": 183,
+  "selection_scope": "2023 annual reports only; comparative value years preserved",
+  "candidate_questions": 100,
+  "banks": 24,
+  "split_counts": {
+    "development": 40,
+    "reserved_test": 60
+  },
+  "development_banks": [
+    "BPCE",
+    "Barclays",
+    "Citigroup",
+    "DNB Group",
+    "Intesa Sanpaolo",
+    "JP Morgan",
+    "LBG",
+    "Mediobanca",
+    "Wells Fargo"
+  ],
+  "reserved_test_banks": [
+    "BBVA",
+    "BNP Paribas",
+    "Banco BPM",
+    "Banco Santander",
+    "Bank Of America",
+    "Commerzbank",
+    "Credit Agricole",
+    "Deutsche Bank",
+    "HSBC",
+    "ING",
+    "MPS",
+    "RBS",
+    "Societe Generale",
+    "UBS",
+    "Unicredit"
+  ],
+  "ready_for_evaluation": false,
+  "reason": "Source URLs, document identity, physical evidence pages and reference verification are missing.",
+  "independence": "Bank-disjoint split; JPMorgan forced into development because existing diagnostics used that issuer. No reserved-test outcomes inspected. Public values may have model-training exposure.",
+  "reuse": "Upstream repository has no explicit license identified; annotations remain local pending reuse review.",
+  "active_split_version": "v3",
+  "replaces": "v1/v2 pre-evaluation drafts; 2023 annual-report scope limits source-mapping workload",
+  "mapped_questions_pending_independent_review": 14,
+  "source_reports_mapped": 3,
+  "unmapped_questions": 86,
+  "independent_reference_review_complete": false
+}

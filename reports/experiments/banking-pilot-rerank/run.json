@@ -1,0 +1,1069 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-19T20:50:45.871992+00:00",
+  "python": "3.14.6",
+  "paid_calls": 0,
+  "implementation_sha256": {
+    "__init__.py": "a736d57893d495b548be01fd6402b5713dc251bd403c4d2684c9d3cbcc42f272",
+    "answer_checks.py": "1ed518f2e07449681985d324f54ab748fbe98ba83060e592b860f6d93595957f",
+    "answer_evaluation.py": "6944545e18b754f6f584d684556d94dac3e4dbce860102aa118851ea5237a00a",
+    "api.py": "760f447d14256eb9aa9ff2c363b3877312aecfd547408d5fc2e34a83ef19b56b",
+    "cli.py": "0c64efb658362e16b450a8a755b91fdd194135e88fce95f84c17c4caa42df54b",
+    "evaluation.py": "e23ed5905a2a38fa729b7fb50cd3142d09b73d6460ce96c95bd0a4ef97a30e8f",
+    "experiments.py": "a252934b18474dcfb2bd8e6ae3b2bd669a78a9df8d58e0c51e64556c8d689331",
+    "files.py": "6d9310e8cfb5ef51196303743e667c666e5ab4110f255a1bc6c58d9f584afb60",
+    "generation.py": "db508b24b64fcd53ad613e98eae0dbea214854c51f1355fc40aa5b4edbed376f",
+    "segment_tables.py": "2c46074179ea54340de353b2409833e0e9e6eb24e2527a26ae1647485f4f0457",
+    "semantic.py": "5e8ec46ceda59e345c3d627c8ce1dd978eb35e4ee9c012dae616662c30b02cd2",
+    "store.py": "49e3b84b10e4e6f9cab00f2f6bb44cb187f421838524df69b6a6dffd89a49245",
+    "tables.py": "fe7f25c0201263901a414ea7840ab4515b26a4e2d47869c90ca75717e85cff3b"
+  },
+  "model_configuration": {
+    "embedding": "BAAI/bge-small-en-v1.5",
+    "reranker": "Xenova/ms-marco-MiniLM-L-6-v2",
+    "note": "Configured identifiers; model weights are not fingerprinted."
+  },
+  "questions_sha256": "26f3b152b1a27281073e3d2c8b6dcc28d23495d2663ccbc3b6ab2d4c5ba5017b",
+  "corpus_passages_sha256": "0da1697a92eb36312afef08148b52d9981f23060399fd2c37832e26722d9c01c",
+  "documents": [
+    {
+      "id": "AMERICANEXPRESS_2022_10K",
+      "company": "American Express",
+      "year": 2022,
+      "url": "https://raw.githubusercontent.com/patronus-ai/financebench/main/pdfs/AMERICANEXPRESS_2022_10K.pdf",
+      "sha256": "d3bbc7ab23d6160e07eab50a359e4d68c40efff9fde3baa168e7c40e06f568e6",
+      "pages": 260
+    },
+    {
+      "id": "JPMORGAN_2021Q1_10Q",
+      "company": "JPMorgan",
+      "year": 2021,
+      "url": "https://raw.githubusercontent.com/patronus-ai/financebench/main/pdfs/JPMORGAN_2021Q1_10Q.pdf",
+      "sha256": "62518c05b02265dc13ca257d9ec0be0aec4449dad53db0c77d93444e7e2cfe97",
+      "pages": 179
+    },
+    {
+      "id": "JPMORGAN_2022Q2_10Q",
+      "company": "JPMorgan",
+      "year": 2022,
+      "url": "https://raw.githubusercontent.com/patronus-ai/financebench/main/pdfs/JPMORGAN_2022Q2_10Q.pdf",
+      "sha256": "7d715f552d4eeb6b2a1ea8ae02237b5767306907e761270ac23d74ac5b7e44b5",
+      "pages": 197
+    },
+    {
+      "id": "JPMORGAN_2022_10K",
+      "company": "JPMorgan",
+      "year": 2022,
+      "url": "https://raw.githubusercontent.com/patronus-ai/financebench/main/pdfs/JPMORGAN_2022_10K.pdf",
+      "sha256": "c269899950f36edfa496e3c8447a51d86d0a206442a96dc24dcd9317d55b957c",
+      "pages": 382
+    },
+    {
+      "id": "JPMORGAN_2023Q2_10Q",
+      "company": "JPMorgan",
+      "year": 2023,
+      "url": "https://raw.githubusercontent.com/patronus-ai/financebench/main/pdfs/JPMORGAN_2023Q2_10Q.pdf",
+      "sha256": "eef2d9c1fdb5dc82be48166487a9e451c8544aec932a01fb06309ea7cd7122f5",
+      "pages": 217
+    }
+  ],
+  "k": 5,
+  "repeats": 1,
+  "results": [
+    {
+      "strategy": "rerank",
+      "mode": "document",
+      "runs": [
+        {
+          "metrics": {
+            "retriever": "rerank",
+            "mode": "document",
+            "k": 5,
+            "evaluated": 12,
+            "skipped_missing_documents": 8,
+            "hit_rate": 0.3333333333333333,
+            "mrr": 0.23611111111111113,
+            "page_recall": 0.3333333333333333,
+            "ndcg": 0.26091081279762146,
+            "limitation": "Page-level retrieval only; not answer accuracy or evidence-span support.",
+            "results": [
+              {
+                "id": "financebench_id_00476",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              },
+              {
+                "id": "financebench_id_01028",
+                "hit": 1,
+                "rr": 0.3333333333333333,
+                "recall": 1.0,
+                "ndcg": 0.5
+              },
+              {
+                "id": "financebench_id_00723",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "financebench_id_00720",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "financebench_id_01351",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "financebench_id_01964",
+                "hit": 1,
+                "rr": 0.5,
+                "recall": 1.0,
+                "ndcg": 0.6309297535714575
+              },
+              {
+                "id": "financebench_id_01981",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "financebench_id_00299",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "financebench_id_02119",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "financebench_id_00206",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "financebench_id_00394",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "financebench_id_02049",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              }
+            ]
+          },
+          "trace": [
+            {
+              "seconds": 3.0156672910088673,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  1
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  41
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  118
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  23
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  259
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p1:c0",
+                "AMERICANEXPRESS_2022_10K:p41:c0",
+                "AMERICANEXPRESS_2022_10K:p118:c1",
+                "AMERICANEXPRESS_2022_10K:p23:c3",
+                "AMERICANEXPRESS_2022_10K:p259:c0"
+              ]
+            },
+            {
+              "seconds": 3.258389458002057,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  25
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  153
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  155
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  53
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  72
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p25:c2",
+                "AMERICANEXPRESS_2022_10K:p153:c0",
+                "AMERICANEXPRESS_2022_10K:p155:c0",
+                "AMERICANEXPRESS_2022_10K:p53:c0",
+                "AMERICANEXPRESS_2022_10K:p72:c1"
+              ]
+            },
+            {
+              "seconds": 3.3239290829515085,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  64
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  46
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  225
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  236
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  253
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p64:c0",
+                "AMERICANEXPRESS_2022_10K:p46:c0",
+                "AMERICANEXPRESS_2022_10K:p225:c0",
+                "AMERICANEXPRESS_2022_10K:p236:c0",
+                "AMERICANEXPRESS_2022_10K:p253:c1"
+              ]
+            },
+            {
+              "seconds": 3.169873374979943,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  121
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  141
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  225
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  118
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  38
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p121:c1",
+                "AMERICANEXPRESS_2022_10K:p141:c0",
+                "AMERICANEXPRESS_2022_10K:p225:c0",
+                "AMERICANEXPRESS_2022_10K:p118:c2",
+                "AMERICANEXPRESS_2022_10K:p38:c2"
+              ]
+            },
+            {
+              "seconds": 2.712808457959909,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  148
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  49
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  47
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  155
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  146
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p148:c0",
+                "AMERICANEXPRESS_2022_10K:p49:c1",
+                "AMERICANEXPRESS_2022_10K:p47:c1",
+                "AMERICANEXPRESS_2022_10K:p155:c0",
+                "AMERICANEXPRESS_2022_10K:p146:c0"
+              ]
+            },
+            {
+              "seconds": 2.8521272920188494,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  152
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  98
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  83
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  139
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  142
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p152:c0",
+                "AMERICANEXPRESS_2022_10K:p98:c0",
+                "AMERICANEXPRESS_2022_10K:p83:c0",
+                "AMERICANEXPRESS_2022_10K:p139:c1",
+                "AMERICANEXPRESS_2022_10K:p142:c0"
+              ]
+            },
+            {
+              "seconds": 2.4396255830070004,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  29
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  27
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  26
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  39
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  43
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p29:c4",
+                "AMERICANEXPRESS_2022_10K:p27:c1",
+                "AMERICANEXPRESS_2022_10K:p26:c2",
+                "AMERICANEXPRESS_2022_10K:p39:c0",
+                "AMERICANEXPRESS_2022_10K:p43:c1"
+              ]
+            },
+            {
+              "seconds": 3.0330285410163924,
+              "pages": [
+                [
+                  "JPMORGAN_2021Q1_10Q",
+                  4
+                ],
+                [
+                  "JPMORGAN_2021Q1_10Q",
+                  9
+                ],
+                [
+                  "JPMORGAN_2021Q1_10Q",
+                  6
+                ],
+                [
+                  "JPMORGAN_2021Q1_10Q",
+                  160
+                ],
+                [
+                  "JPMORGAN_2021Q1_10Q",
+                  28
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGAN_2021Q1_10Q:p4:c1",
+                "JPMORGAN_2021Q1_10Q:p9:c0",
+                "JPMORGAN_2021Q1_10Q:p6:c0",
+                "JPMORGAN_2021Q1_10Q:p160:c0",
+                "JPMORGAN_2021Q1_10Q:p28:c0"
+              ]
+            },
+            {
+              "seconds": 3.770363457966596,
+              "pages": [
+                [
+                  "JPMORGAN_2021Q1_10Q",
+                  31
+                ],
+                [
+                  "JPMORGAN_2021Q1_10Q",
+                  83
+                ],
+                [
+                  "JPMORGAN_2021Q1_10Q",
+                  81
+                ],
+                [
+                  "JPMORGAN_2021Q1_10Q",
+                  82
+                ],
+                [
+                  "JPMORGAN_2021Q1_10Q",
+                  4
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGAN_2021Q1_10Q:p31:c0",
+                "JPMORGAN_2021Q1_10Q:p83:c0",
+                "JPMORGAN_2021Q1_10Q:p81:c2",
+                "JPMORGAN_2021Q1_10Q:p82:c0",
+                "JPMORGAN_2021Q1_10Q:p4:c0"
+              ]
+            },
+            {
+              "seconds": 3.7230212499853224,
+              "pages": [
+                [
+                  "JPMORGAN_2022_10K",
+                  28
+                ],
+                [
+                  "JPMORGAN_2022_10K",
+                  79
+                ],
+                [
+                  "JPMORGAN_2022_10K",
+                  197
+                ],
+                [
+                  "JPMORGAN_2022_10K",
+                  78
+                ],
+                [
+                  "JPMORGAN_2022_10K",
+                  6
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGAN_2022_10K:p28:c1",
+                "JPMORGAN_2022_10K:p79:c2",
+                "JPMORGAN_2022_10K:p197:c2",
+                "JPMORGAN_2022_10K:p78:c1",
+                "JPMORGAN_2022_10K:p6:c1"
+              ]
+            },
+            {
+              "seconds": 3.6326520000002347,
+              "pages": [
+                [
+                  "JPMORGAN_2022Q2_10Q",
+                  10
+                ],
+                [
+                  "JPMORGAN_2022Q2_10Q",
+                  4
+                ],
+                [
+                  "JPMORGAN_2022Q2_10Q",
+                  7
+                ],
+                [
+                  "JPMORGAN_2022Q2_10Q",
+                  177
+                ],
+                [
+                  "JPMORGAN_2022Q2_10Q",
+                  37
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGAN_2022Q2_10Q:p10:c0",
+                "JPMORGAN_2022Q2_10Q:p4:c1",
+                "JPMORGAN_2022Q2_10Q:p7:c0",
+                "JPMORGAN_2022Q2_10Q:p177:c1",
+                "JPMORGAN_2022Q2_10Q:p37:c0"
+              ]
+            },
+            {
+              "seconds": 2.679252333007753,
+              "pages": [
+                [
+                  "JPMORGAN_2023Q2_10Q",
+                  85
+                ],
+                [
+                  "JPMORGAN_2023Q2_10Q",
+                  4
+                ],
+                [
+                  "JPMORGAN_2023Q2_10Q",
+                  84
+                ],
+                [
+                  "JPMORGAN_2023Q2_10Q",
+                  54
+                ],
+                [
+                  "JPMORGAN_2023Q2_10Q",
+                  8
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGAN_2023Q2_10Q:p85:c2",
+                "JPMORGAN_2023Q2_10Q:p4:c0",
+                "JPMORGAN_2023Q2_10Q:p84:c0",
+                "JPMORGAN_2023Q2_10Q:p54:c2",
+                "JPMORGAN_2023Q2_10Q:p8:c2"
+              ]
+            }
+          ]
+        }
+      ],
+      "identical_rankings": null,
+      "median_query_seconds": 3.1014509579981677
+    },
+    {
+      "strategy": "rerank",
+      "mode": "corpus",
+      "runs": [
+        {
+          "metrics": {
+            "retriever": "rerank",
+            "mode": "corpus",
+            "k": 5,
+            "evaluated": 12,
+            "skipped_missing_documents": 8,
+            "hit_rate": 0.16666666666666666,
+            "mrr": 0.0625,
+            "page_recall": 0.16666666666666666,
+            "ndcg": 0.08846719263707088,
+            "limitation": "Page-level retrieval only; not answer accuracy or evidence-span support.",
+            "results": [
+              {
+                "id": "financebench_id_00476",
+                "hit": 1,
+                "rr": 0.5,
+                "recall": 1.0,
+                "ndcg": 0.6309297535714575
+              },
+              {
+                "id": "financebench_id_01028",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "financebench_id_00723",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "financebench_id_00720",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "financebench_id_01351",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "financebench_id_01964",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "financebench_id_01981",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "financebench_id_00299",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "financebench_id_02119",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "financebench_id_00206",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "financebench_id_00394",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "financebench_id_02049",
+                "hit": 1,
+                "rr": 0.25,
+                "recall": 1.0,
+                "ndcg": 0.43067655807339306
+              }
+            ]
+          },
+          "trace": [
+            {
+              "seconds": 3.1170288330176845,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  252
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  1
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  126
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  120
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  162
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p252:c0",
+                "AMERICANEXPRESS_2022_10K:p1:c0",
+                "AMERICANEXPRESS_2022_10K:p126:c0",
+                "AMERICANEXPRESS_2022_10K:p120:c0",
+                "AMERICANEXPRESS_2022_10K:p162:c0"
+              ]
+            },
+            {
+              "seconds": 3.0115267090150155,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  252
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  152
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  6
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  92
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  5
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p252:c0",
+                "AMERICANEXPRESS_2022_10K:p152:c0",
+                "AMERICANEXPRESS_2022_10K:p6:c0",
+                "AMERICANEXPRESS_2022_10K:p92:c0",
+                "AMERICANEXPRESS_2022_10K:p5:c2"
+              ]
+            },
+            {
+              "seconds": 3.6858794590225443,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  45
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  64
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  46
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  104
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  49
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p45:c0",
+                "AMERICANEXPRESS_2022_10K:p64:c0",
+                "AMERICANEXPRESS_2022_10K:p46:c0",
+                "AMERICANEXPRESS_2022_10K:p104:c2",
+                "AMERICANEXPRESS_2022_10K:p49:c1"
+              ]
+            },
+            {
+              "seconds": 3.5988192909862846,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  92
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  63
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  64
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  150
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  68
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p92:c0",
+                "AMERICANEXPRESS_2022_10K:p63:c1",
+                "AMERICANEXPRESS_2022_10K:p64:c2",
+                "AMERICANEXPRESS_2022_10K:p150:c1",
+                "AMERICANEXPRESS_2022_10K:p68:c0"
+              ]
+            },
+            {
+              "seconds": 2.9707362090121023,
+              "pages": [
+                [
+                  "JPMORGAN_2022_10K",
+                  272
+                ],
+                [
+                  "JPMORGAN_2023Q2_10Q",
+                  15
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  150
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  126
+                ],
+                [
+                  "JPMORGAN_2022_10K",
+                  56
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGAN_2022_10K:p272:c1",
+                "JPMORGAN_2023Q2_10Q:p15:c0",
+                "AMERICANEXPRESS_2022_10K:p150:c1",
+                "AMERICANEXPRESS_2022_10K:p126:c0",
+                "JPMORGAN_2022_10K:p56:c1"
+              ]
+            },
+            {
+              "seconds": 3.146951667033136,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  152
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  126
+                ],
+                [
+                  "JPMORGAN_2023Q2_10Q",
+                  93
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  92
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  99
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p152:c0",
+                "AMERICANEXPRESS_2022_10K:p126:c0",
+                "JPMORGAN_2023Q2_10Q:p93:c2",
+                "AMERICANEXPRESS_2022_10K:p92:c0",
+                "AMERICANEXPRESS_2022_10K:p99:c1"
+              ]
+            },
+            {
+              "seconds": 3.1411375420284458,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  7
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  5
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  9
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  6
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  28
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p7:c1",
+                "AMERICANEXPRESS_2022_10K:p5:c2",
+                "AMERICANEXPRESS_2022_10K:p9:c1",
+                "AMERICANEXPRESS_2022_10K:p6:c0",
+                "AMERICANEXPRESS_2022_10K:p28:c1"
+              ]
+            },
+            {
+              "seconds": 4.594392374972813,
+              "pages": [
+                [
+                  "JPMORGAN_2021Q1_10Q",
+                  4
+                ],
+                [
+                  "JPMORGAN_2022Q2_10Q",
+                  37
+                ],
+                [
+                  "JPMORGAN_2021Q1_10Q",
+                  28
+                ],
+                [
+                  "JPMORGAN_2022Q2_10Q",
+                  177
+                ],
+                [
+                  "JPMORGAN_2021Q1_10Q",
+                  30
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGAN_2021Q1_10Q:p4:c1",
+                "JPMORGAN_2022Q2_10Q:p37:c0",
+                "JPMORGAN_2021Q1_10Q:p28:c0",
+                "JPMORGAN_2022Q2_10Q:p177:c0",
+                "JPMORGAN_2021Q1_10Q:p30:c0"
+              ]
+            },
+            {
+              "seconds": 4.3370699170045555,
+              "pages": [
+                [
+                  "JPMORGAN_2021Q1_10Q",
+                  83
+                ],
+                [
+                  "JPMORGAN_2022Q2_10Q",
+                  92
+                ],
+                [
+                  "JPMORGAN_2022_10K",
+                  187
+                ],
+                [
+                  "JPMORGAN_2022Q2_10Q",
+                  90
+                ],
+                [
+                  "JPMORGAN_2021Q1_10Q",
+                  31
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGAN_2021Q1_10Q:p83:c0",
+                "JPMORGAN_2022Q2_10Q:p92:c0",
+                "JPMORGAN_2022_10K:p187:c2",
+                "JPMORGAN_2022Q2_10Q:p90:c0",
+                "JPMORGAN_2021Q1_10Q:p31:c0"
+              ]
+            },
+            {
+              "seconds": 4.012067250034306,
+              "pages": [
+                [
+                  "JPMORGAN_2023Q2_10Q",
+                  42
+                ],
+                [
+                  "JPMORGAN_2023Q2_10Q",
+                  41
+                ],
+                [
+                  "JPMORGAN_2022Q2_10Q",
+                  37
+                ],
+                [
+                  "JPMORGAN_2021Q1_10Q",
+                  31
+                ],
+                [
+                  "JPMORGAN_2022_10K",
+                  28
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGAN_2023Q2_10Q:p42:c0",
+                "JPMORGAN_2023Q2_10Q:p41:c0",
+                "JPMORGAN_2022Q2_10Q:p37:c0",
+                "JPMORGAN_2021Q1_10Q:p31:c0",
+                "JPMORGAN_2022_10K:p28:c1"
+              ]
+            },
+            {
+              "seconds": 3.621539917017799,
+              "pages": [
+                [
+                  "JPMORGAN_2022Q2_10Q",
+                  7
+                ],
+                [
+                  "JPMORGAN_2023Q2_10Q",
+                  41
+                ],
+                [
+                  "JPMORGAN_2023Q2_10Q",
+                  7
+                ],
+                [
+                  "JPMORGAN_2022_10K",
+                  53
+                ],
+                [
+                  "JPMORGAN_2022Q2_10Q",
+                  4
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGAN_2022Q2_10Q:p7:c0",
+                "JPMORGAN_2023Q2_10Q:p41:c0",
+                "JPMORGAN_2023Q2_10Q:p7:c0",
+                "JPMORGAN_2022_10K:p53:c0",
+                "JPMORGAN_2022Q2_10Q:p4:c1"
+              ]
+            },
+            {
+              "seconds": 3.1555404160171747,
+              "pages": [
+                [
+                  "JPMORGAN_2022_10K",
+                  136
+                ],
+                [
+                  "JPMORGAN_2022Q2_10Q",
+                  76
+                ],
+                [
+                  "JPMORGAN_2021Q1_10Q",
+                  68
+                ],
+                [
+                  "JPMORGAN_2023Q2_10Q",
+                  85
+                ],
+                [
+                  "JPMORGAN_2022_10K",
+                  55
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGAN_2022_10K:p136:c2",
+                "JPMORGAN_2022Q2_10Q:p76:c2",
+                "JPMORGAN_2021Q1_10Q:p68:c0",
+                "JPMORGAN_2023Q2_10Q:p85:c2",
+                "JPMORGAN_2022_10K:p55:c1"
+              ]
+            }
+          ]
+        }
+      ],
+      "identical_rankings": null,
+      "median_query_seconds": 3.3771798535017297
+    }
+  ],
+  "limitations": [
+    "Page retrieval is not answer accuracy.",
+    "Repeatability is measured on this local index and environment only.",
+    "Timing includes first-query model startup; not a production load test.",
+    "Dataset independence and split quality require separate review."
+  ],
+  "metadata_correction": "Repeatability is not measured with a single run. Retrieval outcomes and timings are unchanged."
+}

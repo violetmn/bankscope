@@ -1,0 +1,66 @@
+{
+  "years": [
+    2023,
+    2022
+  ],
+  "rows": [
+    {
+      "label": "Consumer & Community Banking",
+      "values": {
+        "2023": "1094738",
+        "2022": "1131611"
+      }
+    },
+    {
+      "label": "Corporate & Investment Bank",
+      "values": {
+        "2023": "777638",
+        "2022": "689893"
+      }
+    },
+    {
+      "label": "Commercial Banking",
+      "values": {
+        "2023": "273254",
+        "2022": "271342"
+      }
+    },
+    {
+      "label": "Asset & Wealth Management",
+      "values": {
+        "2023": "233232",
+        "2022": "233130"
+      }
+    },
+    {
+      "label": "Corporate",
+      "values": {
+        "2023": "21826",
+        "2022": "14203"
+      }
+    }
+  ],
+  "totals": {
+    "2023": "2400688",
+    "2022": "2340179"
+  },
+  "reconciliation": {
+    "2023": {
+      "matches": true,
+      "total": "2400688",
+      "subtotal": "2400688",
+      "difference": "0"
+    },
+    "2022": {
+      "matches": true,
+      "total": "2340179",
+      "subtotal": "2340179",
+      "difference": "0"
+    }
+  },
+  "average_totals_not_used": {
+    "2023": "2359067",
+    "2022": "2467915"
+  },
+  "average_columns_reconcile": true
+}

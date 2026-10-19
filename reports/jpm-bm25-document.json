@@ -1,0 +1,83 @@
+{
+  "retriever": "bm25",
+  "mode": "document",
+  "k": 5,
+  "evaluated": 6,
+  "skipped_missing_documents": 0,
+  "hit_rate": 1.0,
+  "mrr": 0.6805555555555555,
+  "page_recall": 1.0,
+  "ndcg": 0.7602677186074751,
+  "limitation": "Page-level retrieval only; not answer accuracy or evidence-span support.",
+  "results": [
+    {
+      "id": "jpm-dev-period-end",
+      "hit": 1,
+      "rr": 0.25,
+      "recall": 1.0,
+      "ndcg": 0.43067655807339306
+    },
+    {
+      "id": "jpm-dev-average",
+      "hit": 1,
+      "rr": 0.5,
+      "recall": 1.0,
+      "ndcg": 0.6309297535714575
+    },
+    {
+      "id": "jpm-dev-funding",
+      "hit": 1,
+      "rr": 1.0,
+      "recall": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "jpm-transfer-period-end",
+      "hit": 1,
+      "rr": 0.3333333333333333,
+      "recall": 1.0,
+      "ndcg": 0.5
+    },
+    {
+      "id": "jpm-transfer-average",
+      "hit": 1,
+      "rr": 1.0,
+      "recall": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "jpm-transfer-funding",
+      "hit": 1,
+      "rr": 1.0,
+      "recall": 1.0,
+      "ndcg": 1.0
+    }
+  ],
+  "dataset": "six author-created deposit/funding questions; not a held-out statistical benchmark",
+  "corpus_documents": [
+    {
+      "id": "AMERICANEXPRESS_2022_10K",
+      "company": "American Express",
+      "year": 2022,
+      "url": "https://raw.githubusercontent.com/patronus-ai/financebench/main/pdfs/AMERICANEXPRESS_2022_10K.pdf",
+      "sha256": "d3bbc7ab23d6160e07eab50a359e4d68c40efff9fde3baa168e7c40e06f568e6",
+      "pages": 260
+    },
+    {
+      "id": "JPMORGANCHASE_2022_ANNUAL",
+      "company": "JPMorgan Chase",
+      "year": 2022,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/annualreport-2022.pdf",
+      "sha256": "e2a82330efb82c9ab38b30cd043fa59c0c4b7debb5108559ce3c788bbe7942c6",
+      "pages": 328
+    },
+    {
+      "id": "JPMORGANCHASE_2023_ANNUAL",
+      "company": "JPMorgan Chase",
+      "year": 2023,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/annualreport-2023.pdf",
+      "sha256": "bebb7c4abb278396187cadcac8006951ffcee7dde7c7b458ef364befacbd8908",
+      "pages": 364
+    }
+  ]
+}

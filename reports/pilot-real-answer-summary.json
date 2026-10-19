@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-19",
+  "attempts": 20,
+  "statuses": {
+    "generated_unverified_claims": 8,
+    "citation_check_failed": 12
+  },
+  "input_tokens": 40686,
+  "output_tokens": 1346,
+  "estimated_cost_usd_at_recorded_rates": 0.00691,
+  "human_review_complete": false,
+  "note": "Validation failures are outcomes, not automatic correctness scores. Cost assumes uncached input pricing."
+}

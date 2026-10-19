@@ -1,0 +1,19 @@
+.venv/
+.env
+.env.*
+!.env.example
+__pycache__/
+.pytest_cache/
+*.egg-info/
+data/
+*.sqlite3*
+reports/local-*.json
+.DS_Store
+tmp/
+.coverage*
+htmlcov/
+coverage.xml
+reports/coverage.json
+
+# Private local spending authorization
+reports/pilot-budget-approval.json

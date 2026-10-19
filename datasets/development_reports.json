@@ -1,0 +1,58 @@
+[
+  {
+    "company": "BPCE",
+    "id": "BPCE_2023_ANNUAL",
+    "year": 2023,
+    "url": "https://www.groupebpce.com/app/uploads/2024/04/bce-bpce2023-urd-en-mel-240415.pdf"
+  },
+  {
+    "company": "Barclays",
+    "id": "BARCLAYS_2023_ANNUAL",
+    "year": 2023,
+    "url": "https://home.barclays/content/dam/home-barclays/documents/investor-relations/reports-and-events/annual-reports/2023/Barclays-PLC-Annual-Report-2023.pdf"
+  },
+  {
+    "company": "DNB Group",
+    "id": "DNB_2023_ANNUAL",
+    "year": 2023,
+    "url": "https://ir.dnb.no/sites/default/files/pr/202403145630-1.pdf"
+  },
+  {
+    "company": "Intesa Sanpaolo",
+    "id": "INTESA_2023_ANNUAL",
+    "year": 2023,
+    "url": "https://group.intesasanpaolo.com/content/dam/portalgroup/repository-documenti/investor-relations/bilanci-relazioni-en/2023/2023_Annual__report.pdf"
+  },
+  {
+    "company": "LBG",
+    "id": "LBG_2023_ANNUAL",
+    "year": 2023,
+    "url": "https://www.lloydsbankinggroup.com/assets/pdfs/investors/financial-performance/lloyds-banking-group-plc/2023/q4/2023-lbg-annual-report.pdf",
+    "download_url": "https://www.annualreports.com/HostedData/AnnualReportArchive/L/LSE_LLOY_2023.pdf",
+    "provenance_note": "Issuer URL returned HTML; issuer-authored annual report obtained from AnnualReports.com mirror. Byte identity with issuer URL unverified."
+  },
+  {
+    "company": "Mediobanca",
+    "id": "MEDIOBANCA_2023_ANNUAL",
+    "year": 2023,
+    "url": "https://www.mediobanca.com/static/upload_new/ann/annual-report-30-june-2023.pdf"
+  },
+  {
+    "company": "Citigroup",
+    "id": "CITIGROUP_2023_ANNUAL",
+    "year": 2023,
+    "url": "https://www.citigroup.com/rcs/citigpa/storage/public/Citi-2023-Annual-Report.pdf"
+  },
+  {
+    "company": "JP Morgan",
+    "id": "JPMORGANCHASE_2023_ANNUAL",
+    "year": 2023,
+    "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/annualreport-2023.pdf"
+  },
+  {
+    "company": "Wells Fargo",
+    "id": "WELLSFARGO_2023_ANNUAL",
+    "year": 2023,
+    "url": "https://www.wellsfargo.com/assets/pdf/about/investor-relations/annual-reports/2023-annual-report.pdf"
+  }
+]

@@ -1,0 +1,101 @@
+{
+  "scope": "Inspected development questions only; original results unchanged",
+  "misses": [
+    {
+      "id": "financebench_id_00723",
+      "question": "Does AMEX have an improving operating margin profile as of 2022? If operating margin is not a useful metric for a company like this, then state that and explain why.",
+      "gold_pages": [
+        96
+      ],
+      "dense_gold_chunk_rank": 316,
+      "lexical_top20_gold_rank": null,
+      "failure_stage": "candidate_recall",
+      "source_text_present": true,
+      "reference_interpretation_review_required": true
+    },
+    {
+      "id": "financebench_id_00720",
+      "question": "What drove gross margin change as of the FY2022 for American Express? If gross margin is not a useful metric for a company like this, then please state that and explain why.",
+      "gold_pages": [
+        96
+      ],
+      "dense_gold_chunk_rank": 94,
+      "lexical_top20_gold_rank": null,
+      "failure_stage": "candidate_recall",
+      "source_text_present": true,
+      "reference_interpretation_review_required": true
+    },
+    {
+      "id": "financebench_id_01351",
+      "question": "How much has the effective tax rate of American Express changed between FY2021 and FY2022?",
+      "gold_pages": [
+        44
+      ],
+      "dense_gold_chunk_rank": 39,
+      "lexical_top20_gold_rank": null,
+      "failure_stage": "candidate_recall",
+      "source_text_present": true,
+      "reference_interpretation_review_required": false
+    },
+    {
+      "id": "financebench_id_01981",
+      "question": "Was American Express able to retain card members during 2022?",
+      "gold_pages": [
+        45
+      ],
+      "dense_gold_chunk_rank": 56,
+      "lexical_top20_gold_rank": 20,
+      "failure_stage": "reranking",
+      "source_text_present": true,
+      "reference_interpretation_review_required": false
+    },
+    {
+      "id": "financebench_id_00299",
+      "question": "Which of JPM's business segments had the lowest net revenue in 2021 Q1?",
+      "gold_pages": [
+        19
+      ],
+      "dense_gold_chunk_rank": 31,
+      "lexical_top20_gold_rank": null,
+      "failure_stage": "candidate_recall",
+      "source_text_present": true,
+      "reference_interpretation_review_required": false
+    },
+    {
+      "id": "financebench_id_02119",
+      "question": "If JPM went bankrupted by the end by 2021 Q1 and liquidated all of its assets to pay its shareholders, how much could each shareholder get?",
+      "gold_pages": [
+        6
+      ],
+      "dense_gold_chunk_rank": 89,
+      "lexical_top20_gold_rank": null,
+      "failure_stage": "candidate_recall",
+      "source_text_present": true,
+      "reference_interpretation_review_required": false
+    },
+    {
+      "id": "financebench_id_00206",
+      "question": "Are JPM's gross margins historically consistent (not fluctuating more than roughly 2% each year)? If gross margins are not a relevant metric for a company like this, then please state that and explain why.",
+      "gold_pages": [
+        3
+      ],
+      "dense_gold_chunk_rank": 450,
+      "lexical_top20_gold_rank": null,
+      "failure_stage": "candidate_recall",
+      "source_text_present": true,
+      "reference_interpretation_review_required": true
+    },
+    {
+      "id": "financebench_id_00394",
+      "question": "In 2022 Q2, which of JPM's business segments had the highest net income?",
+      "gold_pages": [
+        21
+      ],
+      "dense_gold_chunk_rank": 19,
+      "lexical_top20_gold_rank": null,
+      "failure_stage": "reranking",
+      "source_text_present": true,
+      "reference_interpretation_review_required": false
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-19",
+  "tests_passed": 200,
+  "paid_calls": 0,
+  "coverage": {
+    "covered_lines": 870,
+    "num_statements": 1021,
+    "percent_covered": 84.84848484848484,
+    "percent_covered_display": "85",
+    "missing_lines": 151,
+    "excluded_lines": 0,
+    "percent_statements_covered": 85.2105778648384,
+    "percent_statements_covered_display": "85",
+    "num_branches": 398,
+    "num_partial_branches": 42,
+    "covered_branches": 334,
+    "missing_branches": 64,
+    "percent_branches_covered": 83.91959798994975,
+    "percent_branches_covered_display": "84"
+  },
+  "limitations": [
+    "Provider responses are mocked; coverage does not establish answer accuracy",
+    "Optional source-PDF integration tests skip without downloaded reports",
+    "Focused deposit-table adapters only; frozen JPMorgan adapter rejected the 2022 report layout",
+    "Six JPMorgan retrieval questions are narrow development diagnostics, not a held-out benchmark",
+    "The 20-question pilot is development-only; no real-answer review scores yet",
+    "100 FinRAG-QA candidates are not evaluation-ready; source mapping and independent review are pending"
+  ]
+}

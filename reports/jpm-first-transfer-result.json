@@ -1,0 +1,8 @@
+{
+  "adapter_sha256": "2c46074179ea54340de353b2409833e0e9e6eb24e2527a26ae1647485f4f0457",
+  "test_document": "JPMORGANCHASE_2022_ANNUAL",
+  "first_report_transfer_run": true,
+  "extraction_succeeded": false,
+  "error": "Financial values do not align with year headers",
+  "source_page_after_test_review": 120
+}

@@ -1,0 +1,17 @@
+{
+  "created": "2026-10-19",
+  "development_document": "JPMORGANCHASE_2023_ANNUAL",
+  "test_document": "JPMORGANCHASE_2022_ANNUAL",
+  "procedure": [
+    "Inspect and implement the segment-deposit table adapter using only the 2023 report.",
+    "Save a SHA-256 fingerprint of the adapter before running it on the 2022 report.",
+    "Run the frozen adapter on the 2022 report once and record success or failure.",
+    "Independently inspect the test report source table to validate values, units, columns and totals.",
+    "Do not tune the adapter on test failures. Any later tuning turns this report into development data."
+  ],
+  "limitations": [
+    "One report-transfer test is a small format generalization check, not a statistical accuracy benchmark.",
+    "Comparative annual reports overlap in financial periods and may share layout. The split is by report, not independent financial facts.",
+    "No real LLM answer accuracy is measured by deterministic table tests."
+  ]
+}

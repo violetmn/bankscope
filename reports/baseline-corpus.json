@@ -1,0 +1,73 @@
+{
+  "retriever": "sqlite-fts5-bm25",
+  "mode": "corpus",
+  "k": 5,
+  "evaluated": 7,
+  "skipped_missing_documents": 143,
+  "hit_rate": 0.14285714285714285,
+  "mrr": 0.14285714285714285,
+  "page_recall": 0.14285714285714285,
+  "ndcg": 0.14285714285714285,
+  "limitation": "Page-level retrieval only; not answer accuracy or evidence-span support.",
+  "results": [
+    {
+      "id": "financebench_id_00476",
+      "hit": 1,
+      "rr": 1.0,
+      "recall": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "financebench_id_01028",
+      "hit": 0,
+      "rr": 0,
+      "recall": 0.0,
+      "ndcg": 0.0
+    },
+    {
+      "id": "financebench_id_00723",
+      "hit": 0,
+      "rr": 0,
+      "recall": 0.0,
+      "ndcg": 0.0
+    },
+    {
+      "id": "financebench_id_00720",
+      "hit": 0,
+      "rr": 0,
+      "recall": 0.0,
+      "ndcg": 0.0
+    },
+    {
+      "id": "financebench_id_01351",
+      "hit": 0,
+      "rr": 0,
+      "recall": 0.0,
+      "ndcg": 0.0
+    },
+    {
+      "id": "financebench_id_01964",
+      "hit": 0,
+      "rr": 0,
+      "recall": 0.0,
+      "ndcg": 0.0
+    },
+    {
+      "id": "financebench_id_01981",
+      "hit": 0,
+      "rr": 0,
+      "recall": 0.0,
+      "ndcg": 0.0
+    }
+  ],
+  "corpus_documents": [
+    {
+      "id": "AMERICANEXPRESS_2022_10K",
+      "company": "American Express",
+      "year": 2022,
+      "url": "https://raw.githubusercontent.com/patronus-ai/financebench/main/pdfs/AMERICANEXPRESS_2022_10K.pdf",
+      "sha256": "d3bbc7ab23d6160e07eab50a359e4d68c40efff9fde3baa168e7c40e06f568e6",
+      "pages": 260
+    }
+  ]
+}

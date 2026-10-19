@@ -1,0 +1,1591 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-19T20:30:32.484461+00:00",
+  "python": "3.14.6",
+  "paid_calls": 0,
+  "implementation_sha256": {
+    "__init__.py": "a736d57893d495b548be01fd6402b5713dc251bd403c4d2684c9d3cbcc42f272",
+    "answer_checks.py": "1ed518f2e07449681985d324f54ab748fbe98ba83060e592b860f6d93595957f",
+    "api.py": "760f447d14256eb9aa9ff2c363b3877312aecfd547408d5fc2e34a83ef19b56b",
+    "cli.py": "0c64efb658362e16b450a8a755b91fdd194135e88fce95f84c17c4caa42df54b",
+    "evaluation.py": "e23ed5905a2a38fa729b7fb50cd3142d09b73d6460ce96c95bd0a4ef97a30e8f",
+    "experiments.py": "a252934b18474dcfb2bd8e6ae3b2bd669a78a9df8d58e0c51e64556c8d689331",
+    "files.py": "6d9310e8cfb5ef51196303743e667c666e5ab4110f255a1bc6c58d9f584afb60",
+    "generation.py": "db508b24b64fcd53ad613e98eae0dbea214854c51f1355fc40aa5b4edbed376f",
+    "segment_tables.py": "2c46074179ea54340de353b2409833e0e9e6eb24e2527a26ae1647485f4f0457",
+    "semantic.py": "5e8ec46ceda59e345c3d627c8ce1dd978eb35e4ee9c012dae616662c30b02cd2",
+    "store.py": "49e3b84b10e4e6f9cab00f2f6bb44cb187f421838524df69b6a6dffd89a49245",
+    "tables.py": "fe7f25c0201263901a414ea7840ab4515b26a4e2d47869c90ca75717e85cff3b"
+  },
+  "model_configuration": {
+    "embedding": "BAAI/bge-small-en-v1.5",
+    "reranker": "Xenova/ms-marco-MiniLM-L-6-v2",
+    "note": "Configured identifiers; model weights are not fingerprinted."
+  },
+  "questions_sha256": "15c2bdb4deabf197e2925283e782ddcfc8e6a759331af76ad23ba92c212f2254",
+  "corpus_passages_sha256": "7c7d859569de2360ea6e3cba5b228bbb9c76b50d09a86a7c9d13ff110de456df",
+  "documents": [
+    {
+      "id": "AMERICANEXPRESS_2022_10K",
+      "company": "American Express",
+      "year": 2022,
+      "url": "https://raw.githubusercontent.com/patronus-ai/financebench/main/pdfs/AMERICANEXPRESS_2022_10K.pdf",
+      "sha256": "d3bbc7ab23d6160e07eab50a359e4d68c40efff9fde3baa168e7c40e06f568e6",
+      "pages": 260
+    },
+    {
+      "id": "JPMORGANCHASE_2022_ANNUAL",
+      "company": "JPMorgan Chase",
+      "year": 2022,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/annualreport-2022.pdf",
+      "sha256": "e2a82330efb82c9ab38b30cd043fa59c0c4b7debb5108559ce3c788bbe7942c6",
+      "pages": 328
+    },
+    {
+      "id": "JPMORGANCHASE_2023_ANNUAL",
+      "company": "JPMorgan Chase",
+      "year": 2023,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/annualreport-2023.pdf",
+      "sha256": "bebb7c4abb278396187cadcac8006951ffcee7dde7c7b458ef364befacbd8908",
+      "pages": 364
+    }
+  ],
+  "k": 5,
+  "repeats": 3,
+  "results": [
+    {
+      "strategy": "bm25",
+      "mode": "document",
+      "runs": [
+        {
+          "metrics": {
+            "retriever": "bm25",
+            "mode": "document",
+            "k": 5,
+            "evaluated": 6,
+            "skipped_missing_documents": 0,
+            "hit_rate": 1.0,
+            "mrr": 0.6805555555555555,
+            "page_recall": 1.0,
+            "ndcg": 0.7602677186074751,
+            "limitation": "Page-level retrieval only; not answer accuracy or evidence-span support.",
+            "results": [
+              {
+                "id": "jpm-dev-period-end",
+                "hit": 1,
+                "rr": 0.25,
+                "recall": 1.0,
+                "ndcg": 0.43067655807339306
+              },
+              {
+                "id": "jpm-dev-average",
+                "hit": 1,
+                "rr": 0.5,
+                "recall": 1.0,
+                "ndcg": 0.6309297535714575
+              },
+              {
+                "id": "jpm-dev-funding",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              },
+              {
+                "id": "jpm-transfer-period-end",
+                "hit": 1,
+                "rr": 0.3333333333333333,
+                "recall": 1.0,
+                "ndcg": 0.5
+              },
+              {
+                "id": "jpm-transfer-average",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              },
+              {
+                "id": "jpm-transfer-funding",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              }
+            ]
+          },
+          "trace": [
+            {
+              "seconds": 0.006565457966644317,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  114
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  115
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2023_ANNUAL:p114:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p120:c3",
+                "JPMORGANCHASE_2023_ANNUAL:p120:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p115:c0"
+              ]
+            },
+            {
+              "seconds": 0.004957875004038215,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  93
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  92
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  144
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2023_ANNUAL:p93:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p92:c3",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p144:c2"
+              ]
+            },
+            {
+              "seconds": 0.0036606249632313848,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  346
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  326
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  30
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2023_ANNUAL:p143:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p346:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p326:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p30:c0"
+              ]
+            },
+            {
+              "seconds": 0.0036277499748393893,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  92
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  91
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  97
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2022_ANNUAL:p92:c0",
+                "JPMORGANCHASE_2022_ANNUAL:p91:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c0",
+                "JPMORGANCHASE_2022_ANNUAL:p97:c2"
+              ]
+            },
+            {
+              "seconds": 0.0037222920218482614,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  71
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  113
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  121
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2022_ANNUAL:p120:c2",
+                "JPMORGANCHASE_2022_ANNUAL:p71:c2",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p113:c2",
+                "JPMORGANCHASE_2022_ANNUAL:p121:c0"
+              ]
+            },
+            {
+              "seconds": 0.0035892919986508787,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  293
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  118
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2022_ANNUAL:p120:c0",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p293:c2",
+                "JPMORGANCHASE_2022_ANNUAL:p118:c0",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c2"
+              ]
+            }
+          ]
+        },
+        {
+          "metrics": {
+            "retriever": "bm25",
+            "mode": "document",
+            "k": 5,
+            "evaluated": 6,
+            "skipped_missing_documents": 0,
+            "hit_rate": 1.0,
+            "mrr": 0.6805555555555555,
+            "page_recall": 1.0,
+            "ndcg": 0.7602677186074751,
+            "limitation": "Page-level retrieval only; not answer accuracy or evidence-span support.",
+            "results": [
+              {
+                "id": "jpm-dev-period-end",
+                "hit": 1,
+                "rr": 0.25,
+                "recall": 1.0,
+                "ndcg": 0.43067655807339306
+              },
+              {
+                "id": "jpm-dev-average",
+                "hit": 1,
+                "rr": 0.5,
+                "recall": 1.0,
+                "ndcg": 0.6309297535714575
+              },
+              {
+                "id": "jpm-dev-funding",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              },
+              {
+                "id": "jpm-transfer-period-end",
+                "hit": 1,
+                "rr": 0.3333333333333333,
+                "recall": 1.0,
+                "ndcg": 0.5
+              },
+              {
+                "id": "jpm-transfer-average",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              },
+              {
+                "id": "jpm-transfer-funding",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              }
+            ]
+          },
+          "trace": [
+            {
+              "seconds": 0.003576999995857477,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  114
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  115
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2023_ANNUAL:p114:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p120:c3",
+                "JPMORGANCHASE_2023_ANNUAL:p120:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p115:c0"
+              ]
+            },
+            {
+              "seconds": 0.003521125006955117,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  93
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  92
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  144
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2023_ANNUAL:p93:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p92:c3",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p144:c2"
+              ]
+            },
+            {
+              "seconds": 0.0031061249901540577,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  346
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  326
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  30
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2023_ANNUAL:p143:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p346:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p326:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p30:c0"
+              ]
+            },
+            {
+              "seconds": 0.003448333009146154,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  92
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  91
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  97
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2022_ANNUAL:p92:c0",
+                "JPMORGANCHASE_2022_ANNUAL:p91:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c0",
+                "JPMORGANCHASE_2022_ANNUAL:p97:c2"
+              ]
+            },
+            {
+              "seconds": 0.0038109170272946358,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  71
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  113
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  121
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2022_ANNUAL:p120:c2",
+                "JPMORGANCHASE_2022_ANNUAL:p71:c2",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p113:c2",
+                "JPMORGANCHASE_2022_ANNUAL:p121:c0"
+              ]
+            },
+            {
+              "seconds": 0.0029686250491067767,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  293
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  118
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2022_ANNUAL:p120:c0",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p293:c2",
+                "JPMORGANCHASE_2022_ANNUAL:p118:c0",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c2"
+              ]
+            }
+          ]
+        },
+        {
+          "metrics": {
+            "retriever": "bm25",
+            "mode": "document",
+            "k": 5,
+            "evaluated": 6,
+            "skipped_missing_documents": 0,
+            "hit_rate": 1.0,
+            "mrr": 0.6805555555555555,
+            "page_recall": 1.0,
+            "ndcg": 0.7602677186074751,
+            "limitation": "Page-level retrieval only; not answer accuracy or evidence-span support.",
+            "results": [
+              {
+                "id": "jpm-dev-period-end",
+                "hit": 1,
+                "rr": 0.25,
+                "recall": 1.0,
+                "ndcg": 0.43067655807339306
+              },
+              {
+                "id": "jpm-dev-average",
+                "hit": 1,
+                "rr": 0.5,
+                "recall": 1.0,
+                "ndcg": 0.6309297535714575
+              },
+              {
+                "id": "jpm-dev-funding",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              },
+              {
+                "id": "jpm-transfer-period-end",
+                "hit": 1,
+                "rr": 0.3333333333333333,
+                "recall": 1.0,
+                "ndcg": 0.5
+              },
+              {
+                "id": "jpm-transfer-average",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              },
+              {
+                "id": "jpm-transfer-funding",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              }
+            ]
+          },
+          "trace": [
+            {
+              "seconds": 0.003476249985396862,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  114
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  115
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2023_ANNUAL:p114:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p120:c3",
+                "JPMORGANCHASE_2023_ANNUAL:p120:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p115:c0"
+              ]
+            },
+            {
+              "seconds": 0.003464958048425615,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  93
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  92
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  144
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2023_ANNUAL:p93:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p92:c3",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p144:c2"
+              ]
+            },
+            {
+              "seconds": 0.003190583025570959,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  346
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  326
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  30
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2023_ANNUAL:p143:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p346:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p326:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p30:c0"
+              ]
+            },
+            {
+              "seconds": 0.003984250011853874,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  92
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  91
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  97
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2022_ANNUAL:p92:c0",
+                "JPMORGANCHASE_2022_ANNUAL:p91:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c0",
+                "JPMORGANCHASE_2022_ANNUAL:p97:c2"
+              ]
+            },
+            {
+              "seconds": 0.003653583989944309,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  71
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  113
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  121
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2022_ANNUAL:p120:c2",
+                "JPMORGANCHASE_2022_ANNUAL:p71:c2",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p113:c2",
+                "JPMORGANCHASE_2022_ANNUAL:p121:c0"
+              ]
+            },
+            {
+              "seconds": 0.005991208017803729,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  293
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  118
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2022_ANNUAL:p120:c0",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p293:c2",
+                "JPMORGANCHASE_2022_ANNUAL:p118:c0",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c2"
+              ]
+            }
+          ]
+        }
+      ],
+      "identical_rankings": true,
+      "median_query_seconds": 0.003608520986745134
+    },
+    {
+      "strategy": "bm25",
+      "mode": "corpus",
+      "runs": [
+        {
+          "metrics": {
+            "retriever": "bm25",
+            "mode": "corpus",
+            "k": 5,
+            "evaluated": 6,
+            "skipped_missing_documents": 0,
+            "hit_rate": 1.0,
+            "mrr": 0.4361111111111111,
+            "page_recall": 1.0,
+            "ndcg": 0.5747431864798987,
+            "limitation": "Page-level retrieval only; not answer accuracy or evidence-span support.",
+            "results": [
+              {
+                "id": "jpm-dev-period-end",
+                "hit": 1,
+                "rr": 0.2,
+                "recall": 1.0,
+                "ndcg": 0.38685280723454163
+              },
+              {
+                "id": "jpm-dev-average",
+                "hit": 1,
+                "rr": 0.3333333333333333,
+                "recall": 1.0,
+                "ndcg": 0.5
+              },
+              {
+                "id": "jpm-dev-funding",
+                "hit": 1,
+                "rr": 0.3333333333333333,
+                "recall": 1.0,
+                "ndcg": 0.5
+              },
+              {
+                "id": "jpm-transfer-period-end",
+                "hit": 1,
+                "rr": 0.25,
+                "recall": 1.0,
+                "ndcg": 0.43067655807339306
+              },
+              {
+                "id": "jpm-transfer-average",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              },
+              {
+                "id": "jpm-transfer-funding",
+                "hit": 1,
+                "rr": 0.5,
+                "recall": 1.0,
+                "ndcg": 0.6309297535714575
+              }
+            ]
+          },
+          "trace": [
+            {
+              "seconds": 0.00504812499275431,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  114
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  92
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2023_ANNUAL:p114:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p120:c3",
+                "JPMORGANCHASE_2022_ANNUAL:p92:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p120:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c0"
+              ]
+            },
+            {
+              "seconds": 0.004994208982679993,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  93
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  92
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2022_ANNUAL:p120:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p93:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p92:c3",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c1"
+              ]
+            },
+            {
+              "seconds": 0.004151874978560954,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  67
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p67:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c0",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c1"
+              ]
+            },
+            {
+              "seconds": 0.00502554199192673,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  92
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  114
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  91
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2022_ANNUAL:p92:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p114:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p91:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c0"
+              ]
+            },
+            {
+              "seconds": 0.0057366249966435134,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  93
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  92
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2022_ANNUAL:p120:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p93:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p92:c3",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c2"
+              ]
+            },
+            {
+              "seconds": 0.004223458003252745,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  67
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p67:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c0",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c1"
+              ]
+            }
+          ]
+        },
+        {
+          "metrics": {
+            "retriever": "bm25",
+            "mode": "corpus",
+            "k": 5,
+            "evaluated": 6,
+            "skipped_missing_documents": 0,
+            "hit_rate": 1.0,
+            "mrr": 0.4361111111111111,
+            "page_recall": 1.0,
+            "ndcg": 0.5747431864798987,
+            "limitation": "Page-level retrieval only; not answer accuracy or evidence-span support.",
+            "results": [
+              {
+                "id": "jpm-dev-period-end",
+                "hit": 1,
+                "rr": 0.2,
+                "recall": 1.0,
+                "ndcg": 0.38685280723454163
+              },
+              {
+                "id": "jpm-dev-average",
+                "hit": 1,
+                "rr": 0.3333333333333333,
+                "recall": 1.0,
+                "ndcg": 0.5
+              },
+              {
+                "id": "jpm-dev-funding",
+                "hit": 1,
+                "rr": 0.3333333333333333,
+                "recall": 1.0,
+                "ndcg": 0.5
+              },
+              {
+                "id": "jpm-transfer-period-end",
+                "hit": 1,
+                "rr": 0.25,
+                "recall": 1.0,
+                "ndcg": 0.43067655807339306
+              },
+              {
+                "id": "jpm-transfer-average",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              },
+              {
+                "id": "jpm-transfer-funding",
+                "hit": 1,
+                "rr": 0.5,
+                "recall": 1.0,
+                "ndcg": 0.6309297535714575
+              }
+            ]
+          },
+          "trace": [
+            {
+              "seconds": 0.005059749993961304,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  114
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  92
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2023_ANNUAL:p114:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p120:c3",
+                "JPMORGANCHASE_2022_ANNUAL:p92:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p120:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c0"
+              ]
+            },
+            {
+              "seconds": 0.005209416034631431,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  93
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  92
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2022_ANNUAL:p120:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p93:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p92:c3",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c1"
+              ]
+            },
+            {
+              "seconds": 0.0041704169707372785,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  67
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p67:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c0",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c1"
+              ]
+            },
+            {
+              "seconds": 0.004758541996125132,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  92
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  114
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  91
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2022_ANNUAL:p92:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p114:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p91:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c0"
+              ]
+            },
+            {
+              "seconds": 0.005326583981513977,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  93
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  92
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2022_ANNUAL:p120:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p93:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p92:c3",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c2"
+              ]
+            },
+            {
+              "seconds": 0.004468208993785083,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  67
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p67:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c0",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c1"
+              ]
+            }
+          ]
+        },
+        {
+          "metrics": {
+            "retriever": "bm25",
+            "mode": "corpus",
+            "k": 5,
+            "evaluated": 6,
+            "skipped_missing_documents": 0,
+            "hit_rate": 1.0,
+            "mrr": 0.4361111111111111,
+            "page_recall": 1.0,
+            "ndcg": 0.5747431864798987,
+            "limitation": "Page-level retrieval only; not answer accuracy or evidence-span support.",
+            "results": [
+              {
+                "id": "jpm-dev-period-end",
+                "hit": 1,
+                "rr": 0.2,
+                "recall": 1.0,
+                "ndcg": 0.38685280723454163
+              },
+              {
+                "id": "jpm-dev-average",
+                "hit": 1,
+                "rr": 0.3333333333333333,
+                "recall": 1.0,
+                "ndcg": 0.5
+              },
+              {
+                "id": "jpm-dev-funding",
+                "hit": 1,
+                "rr": 0.3333333333333333,
+                "recall": 1.0,
+                "ndcg": 0.5
+              },
+              {
+                "id": "jpm-transfer-period-end",
+                "hit": 1,
+                "rr": 0.25,
+                "recall": 1.0,
+                "ndcg": 0.43067655807339306
+              },
+              {
+                "id": "jpm-transfer-average",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              },
+              {
+                "id": "jpm-transfer-funding",
+                "hit": 1,
+                "rr": 0.5,
+                "recall": 1.0,
+                "ndcg": 0.6309297535714575
+              }
+            ]
+          },
+          "trace": [
+            {
+              "seconds": 0.00500270799966529,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  114
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  92
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2023_ANNUAL:p114:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p120:c3",
+                "JPMORGANCHASE_2022_ANNUAL:p92:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p120:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c0"
+              ]
+            },
+            {
+              "seconds": 0.008157209027558565,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  93
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  92
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2022_ANNUAL:p120:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p93:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p92:c3",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c1"
+              ]
+            },
+            {
+              "seconds": 0.004394875024445355,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  67
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p67:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c0",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c1"
+              ]
+            },
+            {
+              "seconds": 0.00487524998607114,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  92
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  114
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  91
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2022_ANNUAL:p92:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p114:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p91:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c0"
+              ]
+            },
+            {
+              "seconds": 0.008187042025383562,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  93
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  92
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2022_ANNUAL:p120:c2",
+                "JPMORGANCHASE_2023_ANNUAL:p93:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p92:c3",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c2"
+              ]
+            },
+            {
+              "seconds": 0.0043880410376004875,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  67
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  143
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p67:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c0",
+                "JPMORGANCHASE_2022_ANNUAL:p120:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p143:c1"
+              ]
+            }
+          ]
+        }
+      ],
+      "identical_rankings": true,
+      "median_query_seconds": 0.0049984584911726415
+    }
+  ],
+  "limitations": [
+    "Page retrieval is not answer accuracy.",
+    "Repeatability is measured on this local index and environment only.",
+    "Timing includes first-query model startup; not a production load test.",
+    "Dataset independence and split quality require separate review."
+  ]
+}

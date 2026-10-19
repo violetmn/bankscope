@@ -1,0 +1,88 @@
+{
+  "method": "Offline input-scope replay on inspected development pilot; no model calls or generalization claim",
+  "paid_calls": 0,
+  "results": [
+    {
+      "id": "financebench_id_00476",
+      "scope_limited": false
+    },
+    {
+      "id": "financebench_id_01028",
+      "scope_limited": false
+    },
+    {
+      "id": "financebench_id_00723",
+      "scope_limited": false
+    },
+    {
+      "id": "financebench_id_00720",
+      "scope_limited": false
+    },
+    {
+      "id": "financebench_id_01351",
+      "scope_limited": false
+    },
+    {
+      "id": "financebench_id_01964",
+      "scope_limited": false
+    },
+    {
+      "id": "financebench_id_01981",
+      "scope_limited": false
+    },
+    {
+      "id": "financebench_id_00299",
+      "scope_limited": false
+    },
+    {
+      "id": "financebench_id_02119",
+      "scope_limited": false
+    },
+    {
+      "id": "financebench_id_00206",
+      "scope_limited": false
+    },
+    {
+      "id": "financebench_id_00394",
+      "scope_limited": false
+    },
+    {
+      "id": "financebench_id_02049",
+      "scope_limited": false
+    },
+    {
+      "id": "abstention-01",
+      "scope_limited": true
+    },
+    {
+      "id": "abstention-02",
+      "scope_limited": true
+    },
+    {
+      "id": "abstention-03",
+      "scope_limited": true
+    },
+    {
+      "id": "abstention-04",
+      "scope_limited": true
+    },
+    {
+      "id": "abstention-05",
+      "scope_limited": true
+    },
+    {
+      "id": "abstention-06",
+      "scope_limited": true
+    },
+    {
+      "id": "abstention-07",
+      "scope_limited": true
+    },
+    {
+      "id": "abstention-08",
+      "scope_limited": true
+    }
+  ],
+  "controls_identified": 8,
+  "answerable_questions_flagged": 0
+}

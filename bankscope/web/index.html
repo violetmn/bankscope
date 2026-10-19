@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BankScope · Financial research</title>
+  <link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/tables.css"><script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <header><a class="brand" href="/" aria-label="BankScope home"><span class="brand-icon">▥</span> BankScope<span class="brand-dot">.</span></a><span class="header-label">FINANCIAL RESEARCH WORKSPACE</span><span class="local"><i></i> Local workspace</span></header>
+  <div class="workspace">
+    <aside>
+      <div class="section-label">YOUR LIBRARY <span id="doc-count">—</span></div>
+      <h2>Source reports</h2><p class="muted">The documents your research is grounded in.</p>
+      <div id="library"><p class="muted">Loading reports…</p></div>
+      <div class="library-note"><span class="tiny-label">ABOUT THIS COLLECTION</span><p>American Express and JPMorgan Chase annual reports. Select a report to scope your research.</p><p>Figures are historical, not live market data.</p></div>
+      <a class="api-link" href="/docs">Developer API ↗</a>
+    </aside>
+    <main>
+      <div class="eyebrow"><span></span> FROM QUESTION TO EVIDENCE</div>
+      <h1>Understand the numbers.<br><em>See the source.</em></h1>
+      <p class="intro">Ask a question about a financial report. Explore the relevant passages and check the original pages.</p>
+      <form id="question-form">
+        <div class="filters"><label>Company<select id="company" aria-label="Company"></select></label><label>Report year<select id="year" aria-label="Report year"></select></label><span class="search-badge" id="search-badge">Preparing search</span></div>
+        <label class="sr-only" for="question">Your research question</label>
+        <textarea id="question" placeholder="What would you like to understand about this company?" maxlength="2000" required minlength="3" rows="3"></textarea>
+        <div class="form-footer"><span id="mode-caption">Free local search · no API key needed</span><button type="submit" id="submit">Find evidence <span aria-hidden="true">↗</span></button></div>
+        <label id="generation-option" hidden><input type="checkbox" id="generate"> Generate an AI answer from these sources (uses paid API)</label>
+      </form>
+      <div class="suggestions"><span>TRY ASKING</span><button type="button" data-question="What were total revenues in 2022?">Revenue in 2022 ↗</button><button type="button" data-question="What does the report say about customer deposits?">Customer deposits ↗</button><button type="button" data-question="What are the main credit risks?">Credit risks ↗</button></div>
+      <div id="status" role="status" aria-live="polite"></div>
+      <section id="results" hidden aria-label="Research results">
+        <div class="result-header"><div><span class="eyebrow">RESEARCH RESULTS</span><h2 id="result-title">Passages to review</h2></div><span id="result-meta"></span></div>
+        <div id="answer" hidden></div><div id="source-list"></div>
+      </section>
+      <section id="welcome" class="welcome">
+        <div class="welcome-number">01 — 03</div><h2>A clearer path through financial reports.</h2>
+        <div class="steps"><div><b>01</b><h3>Ask a question</h3><p>Choose a company and reporting year, then ask in plain language.</p></div><div><b>02</b><h3>Explore the evidence</h3><p>Find source passages using local search. Matches need your review.</p></div><div><b>03</b><h3>Check the original</h3><p>Open the cited report page to inspect the full table and context.</p></div></div>
+      </section>
+      <footer>BankScope / Research prototype <span>Source passages are search results, not verified answers or financial advice.</span></footer>
+    </main>
+  </div>
+</body></html>
