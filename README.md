@@ -77,7 +77,7 @@ bankscope/    Ingestion, retrieval, generation, API, and web interface
 tests/        Unit and integration tests
 scripts/      Data preparation and benchmark utilities
 datasets/     Public source manifests and diagnostic definitions
-docs/         Setup, architecture, and demo guide
+docs/         Setup, architecture, and evaluation
 reports/      Evaluation summary, validation, and experiment records
 ```
 
@@ -91,7 +91,7 @@ reports, model weights, and local answer data are excluded from Git.
 
 ## Documentation and data
 
-- [Setup and usage](docs/SETUP.md) · [Architecture](docs/ARCHITECTURE.md) · [Demo walkthrough](docs/DEMO_AND_INTERVIEW.md)
+- [Setup and usage](docs/SETUP.md) · [Architecture](docs/ARCHITECTURE.md)
 - [FinanceBench](https://github.com/patronus-ai/financebench): public financial QA annotations and report sources.
 - [FinRAG-QA](https://github.com/Lsilotto/FinRAG-QA): larger banking benchmark preparation; source mapping and independent review remain in progress.
 

@@ -11,7 +11,7 @@ reproducible retrieval experiments and explicit validation limits.
 | Generated answers | Mocked provider, citation/amount failure tests | Human-scored real answers with fixed rubric and bounded API budget |
 | Table extraction | One JPM development success; frozen transfer failure | Separate development layouts, then new untouched reports |
 | Packaging | Local app, Docker configuration, CI configuration | Actual Docker build/smoke test and successful hosted CI run |
-| Presentation | Architecture, reproducible reports, demo/interview guide | Public repository and recorded walkthrough when ready |
+| Presentation | Architecture and reproducible reports | Public repository |
 
 ## Larger benchmark protocol
 
