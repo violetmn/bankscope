@@ -7,6 +7,26 @@ and checking selected deposit tables with reproducible calculations.
 
 ![BankScope research workspace](docs/images/workspace.png)
 
+[Watch the 60-second walkthrough](https://raw.githubusercontent.com/violetmn/bankscope/main/docs/media/bankscope-walkthrough.mp4)
+— a silent, captioned sequence of real workspace screenshots.
+
+<details>
+<summary>See the workspace in action</summary>
+
+**Checked deposit tables** — JPMorgan Chase, 2023; categories reconcile to the report total.
+
+![Checked deposits table](docs/images/deposit-table.png)
+
+**Cited search results** — credit-risk passages with links to the original PDF pages.
+
+![Credit-risk evidence search](docs/images/evidence-search.png)
+
+**Original report** — inspect the cited table on PDF page 143.
+
+![Original report page](docs/images/source-report.png)
+
+</details>
+
 ## Features
 
 - **Cited research:** search by company and reporting year, then inspect the original PDF page.
