@@ -9,7 +9,7 @@
 3. Select the 2022 report and ask the equivalent question. Show source excerpts
    instead of a structured table. Explain that the frozen extractor rejected this
    layout rather than serving an unchecked calculation.
-4. Open `reports/JPMORGAN_EXPANSION.md`. Explain that BM25 found all six diagnostic
+4. Open `reports/validation/JPMORGAN_EXPANSION.md`. Explain that BM25 found all six diagnostic
    pages while corpus reranking found five. These six questions concentrate on two
    pages; they are not an unbiased general benchmark.
 5. Show a reproducible experiment's JSON trace, source/data fingerprints and repeat

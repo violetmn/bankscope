@@ -79,7 +79,7 @@ def test_report_year_scope_does_not_substitute_another_report(segment_store):
 
 
 def test_extractor_version_matches_pre_transfer_freeze():
-    freeze=json.loads(Path('reports/segment-adapter-freeze.json').read_text())
+    freeze=json.loads(Path('reports/provenance/segment-adapter-freeze.json').read_text())
     assert hashlib.sha256(Path(freeze['file']).read_bytes()).hexdigest()==freeze['sha256']
 
 

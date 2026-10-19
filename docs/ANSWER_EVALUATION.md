@@ -121,6 +121,6 @@ A reviewer should also audit reference annotations; upstream labels are not an
 absolute authority when the original PDF contradicts them.
 
 Future evaluation runs retain withheld drafts privately for auditing. They remain
-withheld from the normal API. See `reports/PILOT_FAILURE_ANALYSIS.md` for the
+withheld from the normal API. See `reports/validation/PILOT_FAILURE_ANALYSIS.md` for the
 original run review and offline scope-check replay; this does not reclassify
 the twelve original failures, whose raw drafts were not retained.

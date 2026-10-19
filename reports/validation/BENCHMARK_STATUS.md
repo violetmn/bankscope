@@ -44,7 +44,7 @@ scores do not count as successful answers.
 ## Reproduction and sources
 
 Commands and the complete rubric: `docs/ANSWER_EVALUATION.md`.
-Source provenance: `reports/finrag-candidate-manifest.json`, the local pilot
+Source provenance: `reports/provenance/finrag-candidate-manifest.json`, the local pilot
 manifest, per-PDF SHA-256 values, and experiment fingerprints. Raw annotations,
 reference values, generated answers, usage records and PDFs remain gitignored.
 The importer preserves upstream values and does not invent missing source maps.

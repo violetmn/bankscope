@@ -7,7 +7,7 @@ Measured locally on 2026-10-19. No paid API calls.
 Three complete reports: American Express 2022 (260 physical pages), JPMorgan
 Chase 2023 (364), and JPMorgan Chase 2022 (328). Total: 952 pages, 2,659 passages.
 The JPMorgan PDFs come directly from the issuer; URLs and checksums are recorded
-in `datasets/bank_reports.json` and `reports/corpus-manifest.json`. Downloads remain
+in `datasets/bank_reports.json` and `reports/provenance/corpus-manifest.json`. Downloads remain
 outside Git. PDFium preserves physical page boundaries for the two added reports;
 the original American Express index uses pdfplumber. All passages have local BGE
 embeddings. Query scope includes company and report year. Comparative figures may
