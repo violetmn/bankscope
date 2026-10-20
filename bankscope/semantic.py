@@ -37,11 +37,11 @@ def reranker_ready():
     return Path(CACHE, "reranker-ready").is_file()
 
 
-def prepare(store):
+def prepare(store, threads=2):
     from fastembed import TextEmbedding
     import numpy as np
     Path(CACHE).mkdir(parents=True, exist_ok=True)
-    model = TextEmbedding(MODEL, cache_dir=CACHE, threads=2)
+    model = TextEmbedding(MODEL, cache_dir=CACHE, threads=threads)
     all_rows = store.db.execute("SELECT p.chunk_id, p.text, e.model, e.text_sha256 FROM passages p LEFT JOIN embeddings e ON p.chunk_id=e.chunk_id ORDER BY p.chunk_id").fetchall()
     if not all_rows:
         raise ValueError("Ingest documents before building embeddings")

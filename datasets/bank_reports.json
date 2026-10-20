@@ -1,5 +1,5 @@
 {
-  "description": "Historical bank reports for local research; PDFs retain publisher terms and are not redistributed in this repository.",
+  "description": "Historical bank reports for local research and development diagnostics; PDFs retain publisher terms and are not redistributed in this repository.",
   "source_page": "https://www.jpmorganchase.com/ir/annual-report",
   "documents": [
     {
@@ -15,6 +15,60 @@
       "year": 2022,
       "split": "report_transfer_test",
       "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/annualreport-2022.pdf"
+    },
+    {
+      "doc_id": "RBC_2022_ANNUAL",
+      "company": "Royal Bank of Canada",
+      "year": 2022,
+      "fiscal_year_end": "2022-10-31",
+      "split": "development",
+      "url": "https://www.rbc.com/investor-relations/_assets-custom/pdf/ar_2022_e.pdf",
+      "source_page": "https://www.rbc.com/investor-relations/financial-information.html"
+    },
+    {
+      "doc_id": "RBC_2023_ANNUAL",
+      "company": "Royal Bank of Canada",
+      "year": 2023,
+      "fiscal_year_end": "2023-10-31",
+      "split": "development",
+      "url": "https://www.rbc.com/investor-relations/_assets-custom/pdf/ar_2023_e.pdf",
+      "source_page": "https://www.rbc.com/investor-relations/financial-information.html"
+    },
+    {
+      "doc_id": "TD_2022_ANNUAL",
+      "company": "TD Bank",
+      "year": 2022,
+      "fiscal_year_end": "2022-10-31",
+      "split": "development",
+      "url": "https://www.td.com/document/PDF/ar2022/ar2022-Complete-Report.pdf",
+      "source_page": "https://www.td.com/ca/en/about-td/for-investors/investor-relations/financial-information/financial-reports/annual-reports/annual-report-2023"
+    },
+    {
+      "doc_id": "TD_2023_ANNUAL",
+      "company": "TD Bank",
+      "year": 2023,
+      "fiscal_year_end": "2023-10-31",
+      "split": "development",
+      "url": "https://www.td.com/document/PDF/ar2023/ar2023-Complete-Report.pdf",
+      "source_page": "https://www.td.com/ca/en/about-td/for-investors/investor-relations/financial-information/financial-reports/annual-reports/annual-report-2023"
+    },
+    {
+      "doc_id": "BMO_2022_ANNUAL",
+      "company": "Bank of Montreal",
+      "year": 2022,
+      "fiscal_year_end": "2022-10-31",
+      "split": "development",
+      "url": "https://www.bmo.com/ir/archive/en/bmo_ar2022.pdf",
+      "source_page": "https://www.bmo.com/main/about-bmo/investor-relations/annual-reports-proxy-circulars"
+    },
+    {
+      "doc_id": "BMO_2023_ANNUAL",
+      "company": "Bank of Montreal",
+      "year": 2023,
+      "fiscal_year_end": "2023-10-31",
+      "split": "development",
+      "url": "https://www.bmo.com/ir/archive/en/bmo_ar2023.pdf",
+      "source_page": "https://www.bmo.com/main/about-bmo/investor-relations/annual-reports-proxy-circulars"
     }
   ]
 }

@@ -32,27 +32,42 @@ Supported questions use extracted table rows and local Decimal arithmetic. All
 categories must reconcile to the reported total in each column. This does not
 validate arbitrary tables or generated prose. See the [table validation report](../reports/validation/DEPOSIT_TABLE.md).
 
-## Add JPMorgan Chase reports
+## Add JPMorgan Chase and Canadian bank reports
+
+The curated catalog includes JPMorgan Chase, Royal Bank of Canada, TD Bank, and
+Bank of Montreal for 2022 and 2023. Canadian reporting years end on October 31;
+selecting 2023 means fiscal 2023. All downloads are official publisher PDFs.
 
 ```sh
 python scripts/fetch_bank_reports.py
-bankscope ingest data/reports/pdfs/JPMORGANCHASE_2023_ANNUAL.pdf \
-  --id JPMORGANCHASE_2023_ANNUAL --company 'JPMorgan Chase' --year 2023 \
-  --extractor pdfium \
-  --url https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/annualreport-2023.pdf
-bankscope ingest data/reports/pdfs/JPMORGANCHASE_2022_ANNUAL.pdf \
-  --id JPMORGANCHASE_2022_ANNUAL --company 'JPMorgan Chase' --year 2022 \
-  --extractor pdfium \
-  --url https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/annualreport-2022.pdf
+python scripts/prepare_bank_index.py --embed
+```
+
+The index preparation command skips unchanged reports, preserving their existing
+vectors and checked tables. It also builds BGE vectors for new passages using
+local inference. First-time embedding setup may download free model weights.
+`--embedding-threads 6` can use more CPU cores during bulk preparation; the default
+is two threads. This affects local throughput, not paid API usage.
+American Express remains available through the README's FinanceBench setup.
+Refresh the workspace after ingestion to load the new company/year choices.
+
+RBC, TD, and BMO support cited evidence search. Their tables have **not** been
+adapted for checked calculations. To prepare the supported JPMorgan 2023 table:
+
+```sh
 bankscope extract-segment-deposits data/reports/pdfs/JPMORGANCHASE_2023_ANNUAL.pdf \
   --id JPMORGANCHASE_2023_ANNUAL
-bankscope embed
 ```
 
 Select JPMorgan Chase and report year 2023. Ask
 `Show period-end deposits by business segment in 2023`.
 The frozen adapter rejects the 2022 layout; that report remains searchable.
 See the [transfer experiment](../reports/validation/JPMORGAN_EXPANSION.md).
+
+The Canadian [development diagnostics](../datasets/canadian_bank_diagnostics.jsonl)
+have one question per new report and zero-based evidence page numbers. Reference
+values and units were checked against rendered source tables by the coding agent;
+independent human review remains pending. They are not a held-out benchmark.
 
 ## Optional AI generation
 

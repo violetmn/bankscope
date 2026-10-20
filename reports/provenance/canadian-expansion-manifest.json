@@ -1,0 +1,103 @@
+{
+  "created_utc": "2026-10-20T16:58:00.484021+00:00",
+  "scope": "Main application corpus after Canadian-bank expansion",
+  "documents": [
+    {
+      "id": "AMERICANEXPRESS_2022_10K",
+      "company": "American Express",
+      "year": 2022,
+      "url": "https://raw.githubusercontent.com/patronus-ai/financebench/main/pdfs/AMERICANEXPRESS_2022_10K.pdf",
+      "sha256": "d3bbc7ab23d6160e07eab50a359e4d68c40efff9fde3baa168e7c40e06f568e6",
+      "pages": 260
+    },
+    {
+      "id": "BMO_2022_ANNUAL",
+      "company": "Bank of Montreal",
+      "year": 2022,
+      "url": "https://www.bmo.com/ir/archive/en/bmo_ar2022.pdf",
+      "sha256": "05aab92f5a0096fa60f120dde8b037e12a43ea4934e3da2e8935628c7d881efe",
+      "pages": 215
+    },
+    {
+      "id": "BMO_2023_ANNUAL",
+      "company": "Bank of Montreal",
+      "year": 2023,
+      "url": "https://www.bmo.com/ir/archive/en/bmo_ar2023.pdf",
+      "sha256": "0c03aa46fded9f7f7aef4303dc9be023cac6bd941df931b5c846762c55adc934",
+      "pages": 220
+    },
+    {
+      "id": "JPMORGANCHASE_2022_ANNUAL",
+      "company": "JPMorgan Chase",
+      "year": 2022,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/annualreport-2022.pdf",
+      "sha256": "e2a82330efb82c9ab38b30cd043fa59c0c4b7debb5108559ce3c788bbe7942c6",
+      "pages": 328
+    },
+    {
+      "id": "JPMORGANCHASE_2023_ANNUAL",
+      "company": "JPMorgan Chase",
+      "year": 2023,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/annualreport-2023.pdf",
+      "sha256": "bebb7c4abb278396187cadcac8006951ffcee7dde7c7b458ef364befacbd8908",
+      "pages": 364
+    },
+    {
+      "id": "RBC_2022_ANNUAL",
+      "company": "Royal Bank of Canada",
+      "year": 2022,
+      "url": "https://www.rbc.com/investor-relations/_assets-custom/pdf/ar_2022_e.pdf",
+      "sha256": "6d83af4a687f2b947c0edaebeb1342ce94e7dcc0449145c4a23c992424ecf640",
+      "pages": 235
+    },
+    {
+      "id": "RBC_2023_ANNUAL",
+      "company": "Royal Bank of Canada",
+      "year": 2023,
+      "url": "https://www.rbc.com/investor-relations/_assets-custom/pdf/ar_2023_e.pdf",
+      "sha256": "e397264e0830325a8b99c6b93339a726f96b4a4898627cf75241a161b5f793c6",
+      "pages": 237
+    },
+    {
+      "id": "TD_2022_ANNUAL",
+      "company": "TD Bank",
+      "year": 2022,
+      "url": "https://www.td.com/document/PDF/ar2022/ar2022-Complete-Report.pdf",
+      "sha256": "cdef48e9d8f91f8565ad77636eb75fd19a32dd53b82e9929f29b45557481d6bb",
+      "pages": 228
+    },
+    {
+      "id": "TD_2023_ANNUAL",
+      "company": "TD Bank",
+      "year": 2023,
+      "url": "https://www.td.com/document/PDF/ar2023/ar2023-Complete-Report.pdf",
+      "sha256": "704a646626776c1e744aec9f99e539d34acc74ea4f0e81fc8a9c733675173918",
+      "pages": 228
+    }
+  ],
+  "reports": 9,
+  "pages": 2315,
+  "passages": 7687,
+  "vectors": 7687,
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "semantic_ready": true,
+  "passages_sha256": "17e01c066c6f1ffba24b74da99fa97eff93c44b61cc81c674f1fe347461240b5",
+  "paid_calls": 0,
+  "labels_indexed": false,
+  "catalog_sha256": "1dfe57916582cbbcc16e67eebce74aaf4f942f3359e6c9c4de8d8106544b9a76",
+  "new_report_extractor": "pdfium",
+  "new_report_empty_pages": {
+    "RBC_2022_ANNUAL": 0,
+    "RBC_2023_ANNUAL": 0,
+    "TD_2022_ANNUAL": 0,
+    "TD_2023_ANNUAL": 0,
+    "BMO_2022_ANNUAL": 1,
+    "BMO_2023_ANNUAL": 1
+  },
+  "limitations": [
+    "Canadian reports use fiscal years ending October 31.",
+    "New Canadian reports support evidence search; no checked table adapters were added.",
+    "Six diagnostic reference tables were checked by the coding agent, not an independent human.",
+    "Historical benchmark runs use their original corpus snapshots."
+  ]
+}

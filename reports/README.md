@@ -40,3 +40,11 @@ Start here for measured results. Detailed evidence is grouped by purpose.
 Historical reports describe their own run dates and corpus sizes. They are retained
 for reproducibility and are not substitutes for the current summary. The benchmark
 annotations, downloaded PDFs, provider answers, and usage ledgers remain local.
+
+## Canadian-bank expansion
+
+The main corpus now contains nine reports and 2,315 pages. Six numerical development
+questions exposed selected-reference-page misses (0/6 Hit@5 for BM25 and reranking).
+See the [expansion checks and limitations](validation/CANADIAN_EXPANSION.md),
+[corpus snapshot](provenance/canadian-expansion-manifest.json), and
+[retrieval run](experiments/canadian-expansion/comparison.md).

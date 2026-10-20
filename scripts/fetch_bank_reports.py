@@ -10,7 +10,7 @@ def main():
     documents = []
     for item in catalog['documents']:
         target = Path('data/reports/pdfs') / f"{item['doc_id']}.pdf"
-        download(item['url'], target, pdf=True)
+        download(item['url'], target, pdf=True, user_agent='Mozilla/5.0')
         documents.append({**item, 'local_path': str(target),
                           'sha256': hashlib.sha256(target.read_bytes()).hexdigest()})
         print('Downloaded', item['doc_id'], flush=True)

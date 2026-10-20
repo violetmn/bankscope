@@ -25,6 +25,10 @@ and checking selected deposit tables with reproducible calculations.
 
 ![Original report page](docs/images/source-report.png)
 
+**Canadian bank coverage** — cited passages from RBC’s 2023 annual report.
+
+![RBC evidence search](docs/images/canadian-banks.png)
+
 </details>
 
 ## Features
@@ -65,7 +69,17 @@ uvicorn bankscope.api:app --host 127.0.0.1 --port 8000
 
 Open **http://127.0.0.1:8000/** for the workspace or **/docs** for the API.
 This starts free keyword search. [Full setup](docs/SETUP.md) covers local models,
-JPMorgan reports, checked tables, and optional API configuration.
+JPMorgan and Canadian bank reports, checked tables, and optional API configuration.
+
+## Report coverage
+
+The expanded local corpus contains **9 reports, 2,315 pages, and 7,687 passages**:
+American Express (2022), plus JPMorgan Chase, RBC, TD, and BMO (2022-2023).
+[Download and index the curated reports](docs/SETUP.md#add-jpmorgan-chase-and-canadian-bank-reports)
+to reproduce the expansion. PDFs and vector indexes remain local.
+The six-question numerical development check missed its selected reference pages
+with both BM25 and reranking; [results and limitations](reports/validation/CANADIAN_EXPANSION.md)
+are recorded. New banks support evidence search, with checked-table adapters pending.
 
 ## Evaluation
 

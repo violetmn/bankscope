@@ -17,3 +17,6 @@ reports/coverage.json
 
 # Private local spending authorization
 reports/pilot-budget-approval.json
+
+# Personal document deliverables are not application source
+output/

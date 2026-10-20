@@ -1,0 +1,1155 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-20T16:58:42.371187+00:00",
+  "python": "3.14.6",
+  "paid_calls": 0,
+  "implementation_sha256": {
+    "__init__.py": "a736d57893d495b548be01fd6402b5713dc251bd403c4d2684c9d3cbcc42f272",
+    "answer_checks.py": "1ed518f2e07449681985d324f54ab748fbe98ba83060e592b860f6d93595957f",
+    "answer_evaluation.py": "d91284406aacb6fcb9e7c23f357688c98a97232ad95bfa66a7bb08d826aa304b",
+    "api.py": "240309c46616df25c3370b6fd71a3816f5e84c85736c19e59c3c554d9fae11eb",
+    "cli.py": "fef386691b188535c5736204857fe28b5bdad43b2830b2aabc7cf5b873a8fe7e",
+    "config.py": "021b934fd7227a92083ec17a624350bd46e36f75d840f5cb4d6053fa5accd53e",
+    "evaluation.py": "e23ed5905a2a38fa729b7fb50cd3142d09b73d6460ce96c95bd0a4ef97a30e8f",
+    "experiments.py": "79610bde300366c528d87b5672d0f87a0883866a9e2f18c55f96fc4c4a89ff4d",
+    "files.py": "6d9310e8cfb5ef51196303743e667c666e5ab4110f255a1bc6c58d9f584afb60",
+    "focused_retrieval.py": "d65804a5dac0712a8583f22c553fa0eda890ad2cc6721dfe8895c939c90eacec",
+    "generation.py": "9b57b3d23e28352c59aec5690e01744e984e3be4c61cd3c116fb88d655088009",
+    "scope_checks.py": "101d3bc05af54a05683a73b7fe43c6bfe562524d2da2a0a88fac637e384b549d",
+    "segment_tables.py": "2c46074179ea54340de353b2409833e0e9e6eb24e2527a26ae1647485f4f0457",
+    "semantic.py": "33751d32118493d81ffaeb81e4f48e8e3c0d94cc60b3e42c16cbaec83fd71305",
+    "store.py": "6cd2c20e6c6f823540d0a4a9f22c076ca5d2f6d45ee66d89ed14841e2558a791",
+    "tables.py": "fe7f25c0201263901a414ea7840ab4515b26a4e2d47869c90ca75717e85cff3b"
+  },
+  "model_configuration": {
+    "embedding": "BAAI/bge-small-en-v1.5",
+    "reranker": "Xenova/ms-marco-MiniLM-L-6-v2",
+    "note": "Configured identifiers; model weights are not fingerprinted."
+  },
+  "questions_sha256": "ad4891d4a5f88a1966347cdcd353f4ac29689c20a6448289a51c5cabb0d2e384",
+  "corpus_passages_sha256": "17e01c066c6f1ffba24b74da99fa97eff93c44b61cc81c674f1fe347461240b5",
+  "documents": [
+    {
+      "id": "AMERICANEXPRESS_2022_10K",
+      "company": "American Express",
+      "year": 2022,
+      "url": "https://raw.githubusercontent.com/patronus-ai/financebench/main/pdfs/AMERICANEXPRESS_2022_10K.pdf",
+      "sha256": "d3bbc7ab23d6160e07eab50a359e4d68c40efff9fde3baa168e7c40e06f568e6",
+      "pages": 260
+    },
+    {
+      "id": "BMO_2022_ANNUAL",
+      "company": "Bank of Montreal",
+      "year": 2022,
+      "url": "https://www.bmo.com/ir/archive/en/bmo_ar2022.pdf",
+      "sha256": "05aab92f5a0096fa60f120dde8b037e12a43ea4934e3da2e8935628c7d881efe",
+      "pages": 215
+    },
+    {
+      "id": "BMO_2023_ANNUAL",
+      "company": "Bank of Montreal",
+      "year": 2023,
+      "url": "https://www.bmo.com/ir/archive/en/bmo_ar2023.pdf",
+      "sha256": "0c03aa46fded9f7f7aef4303dc9be023cac6bd941df931b5c846762c55adc934",
+      "pages": 220
+    },
+    {
+      "id": "JPMORGANCHASE_2022_ANNUAL",
+      "company": "JPMorgan Chase",
+      "year": 2022,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/annualreport-2022.pdf",
+      "sha256": "e2a82330efb82c9ab38b30cd043fa59c0c4b7debb5108559ce3c788bbe7942c6",
+      "pages": 328
+    },
+    {
+      "id": "JPMORGANCHASE_2023_ANNUAL",
+      "company": "JPMorgan Chase",
+      "year": 2023,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/annualreport-2023.pdf",
+      "sha256": "bebb7c4abb278396187cadcac8006951ffcee7dde7c7b458ef364befacbd8908",
+      "pages": 364
+    },
+    {
+      "id": "RBC_2022_ANNUAL",
+      "company": "Royal Bank of Canada",
+      "year": 2022,
+      "url": "https://www.rbc.com/investor-relations/_assets-custom/pdf/ar_2022_e.pdf",
+      "sha256": "6d83af4a687f2b947c0edaebeb1342ce94e7dcc0449145c4a23c992424ecf640",
+      "pages": 235
+    },
+    {
+      "id": "RBC_2023_ANNUAL",
+      "company": "Royal Bank of Canada",
+      "year": 2023,
+      "url": "https://www.rbc.com/investor-relations/_assets-custom/pdf/ar_2023_e.pdf",
+      "sha256": "e397264e0830325a8b99c6b93339a726f96b4a4898627cf75241a161b5f793c6",
+      "pages": 237
+    },
+    {
+      "id": "TD_2022_ANNUAL",
+      "company": "TD Bank",
+      "year": 2022,
+      "url": "https://www.td.com/document/PDF/ar2022/ar2022-Complete-Report.pdf",
+      "sha256": "cdef48e9d8f91f8565ad77636eb75fd19a32dd53b82e9929f29b45557481d6bb",
+      "pages": 228
+    },
+    {
+      "id": "TD_2023_ANNUAL",
+      "company": "TD Bank",
+      "year": 2023,
+      "url": "https://www.td.com/document/PDF/ar2023/ar2023-Complete-Report.pdf",
+      "sha256": "704a646626776c1e744aec9f99e539d34acc74ea4f0e81fc8a9c733675173918",
+      "pages": 228
+    }
+  ],
+  "k": 5,
+  "repeats": 1,
+  "results": [
+    {
+      "strategy": "bm25",
+      "mode": "document",
+      "runs": [
+        {
+          "metrics": {
+            "retriever": "bm25",
+            "mode": "document",
+            "k": 5,
+            "evaluated": 6,
+            "skipped_missing_documents": 0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "page_recall": 0.0,
+            "ndcg": 0.0,
+            "limitation": "Page-level retrieval only; not answer accuracy or evidence-span support.",
+            "results": [
+              {
+                "id": "canadian-dev-rbc-2022",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "canadian-dev-rbc-2023",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "canadian-dev-td-2022",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "canadian-dev-td-2023",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "canadian-dev-bmo-2022",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "canadian-dev-bmo-2023",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              }
+            ]
+          },
+          "trace": [
+            {
+              "seconds": 0.012555166962556541,
+              "pages": [
+                [
+                  "RBC_2022_ANNUAL",
+                  12
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  51
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  49
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  22
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  60
+                ]
+              ],
+              "chunk_ids": [
+                "RBC_2022_ANNUAL:p12:c0",
+                "RBC_2022_ANNUAL:p51:c2",
+                "RBC_2022_ANNUAL:p49:c2",
+                "RBC_2022_ANNUAL:p22:c0",
+                "RBC_2022_ANNUAL:p60:c4"
+              ]
+            },
+            {
+              "seconds": 0.009973499982152134,
+              "pages": [
+                [
+                  "RBC_2023_ANNUAL",
+                  22
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  176
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  232
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  53
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  225
+                ]
+              ],
+              "chunk_ids": [
+                "RBC_2023_ANNUAL:p22:c0",
+                "RBC_2023_ANNUAL:p176:c2",
+                "RBC_2023_ANNUAL:p232:c1",
+                "RBC_2023_ANNUAL:p53:c1",
+                "RBC_2023_ANNUAL:p225:c2"
+              ]
+            },
+            {
+              "seconds": 0.012189207947812974,
+              "pages": [
+                [
+                  "TD_2022_ANNUAL",
+                  128
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  198
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  107
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  128
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  55
+                ]
+              ],
+              "chunk_ids": [
+                "TD_2022_ANNUAL:p128:c0",
+                "TD_2022_ANNUAL:p198:c0",
+                "TD_2022_ANNUAL:p107:c1",
+                "TD_2022_ANNUAL:p128:c1",
+                "TD_2022_ANNUAL:p55:c0"
+              ]
+            },
+            {
+              "seconds": 0.00928562501212582,
+              "pages": [
+                [
+                  "TD_2023_ANNUAL",
+                  9
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  25
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  27
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  23
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  44
+                ]
+              ],
+              "chunk_ids": [
+                "TD_2023_ANNUAL:p9:c1",
+                "TD_2023_ANNUAL:p25:c1",
+                "TD_2023_ANNUAL:p27:c1",
+                "TD_2023_ANNUAL:p23:c5",
+                "TD_2023_ANNUAL:p44:c2"
+              ]
+            },
+            {
+              "seconds": 0.010513167013414204,
+              "pages": [
+                [
+                  "BMO_2022_ANNUAL",
+                  24
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  214
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  196
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  71
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  196
+                ]
+              ],
+              "chunk_ids": [
+                "BMO_2022_ANNUAL:p24:c1",
+                "BMO_2022_ANNUAL:p214:c1",
+                "BMO_2022_ANNUAL:p196:c0",
+                "BMO_2022_ANNUAL:p71:c1",
+                "BMO_2022_ANNUAL:p196:c1"
+              ]
+            },
+            {
+              "seconds": 0.00729754101485014,
+              "pages": [
+                [
+                  "BMO_2023_ANNUAL",
+                  62
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  62
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  62
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  32
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  32
+                ]
+              ],
+              "chunk_ids": [
+                "BMO_2023_ANNUAL:p62:c1",
+                "BMO_2023_ANNUAL:p62:c3",
+                "BMO_2023_ANNUAL:p62:c2",
+                "BMO_2023_ANNUAL:p32:c3",
+                "BMO_2023_ANNUAL:p32:c1"
+              ]
+            }
+          ]
+        }
+      ],
+      "identical_rankings": null,
+      "median_query_seconds": 0.01024333349778317
+    },
+    {
+      "strategy": "bm25",
+      "mode": "corpus",
+      "runs": [
+        {
+          "metrics": {
+            "retriever": "bm25",
+            "mode": "corpus",
+            "k": 5,
+            "evaluated": 6,
+            "skipped_missing_documents": 0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "page_recall": 0.0,
+            "ndcg": 0.0,
+            "limitation": "Page-level retrieval only; not answer accuracy or evidence-span support.",
+            "results": [
+              {
+                "id": "canadian-dev-rbc-2022",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "canadian-dev-rbc-2023",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "canadian-dev-td-2022",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "canadian-dev-td-2023",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "canadian-dev-bmo-2022",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "canadian-dev-bmo-2023",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              }
+            ]
+          },
+          "trace": [
+            {
+              "seconds": 0.011786208022385836,
+              "pages": [
+                [
+                  "RBC_2022_ANNUAL",
+                  12
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  13
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  51
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  49
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  22
+                ]
+              ],
+              "chunk_ids": [
+                "RBC_2022_ANNUAL:p12:c0",
+                "RBC_2023_ANNUAL:p13:c0",
+                "RBC_2022_ANNUAL:p51:c2",
+                "RBC_2022_ANNUAL:p49:c2",
+                "RBC_2022_ANNUAL:p22:c0"
+              ]
+            },
+            {
+              "seconds": 0.011679291957989335,
+              "pages": [
+                [
+                  "RBC_2023_ANNUAL",
+                  22
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  62
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  62
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  22
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  51
+                ]
+              ],
+              "chunk_ids": [
+                "RBC_2023_ANNUAL:p22:c0",
+                "BMO_2023_ANNUAL:p62:c3",
+                "BMO_2023_ANNUAL:p62:c1",
+                "TD_2023_ANNUAL:p22:c4",
+                "RBC_2022_ANNUAL:p51:c2"
+              ]
+            },
+            {
+              "seconds": 0.013624624989461154,
+              "pages": [
+                [
+                  "TD_2022_ANNUAL",
+                  128
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  129
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  198
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  129
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  198
+                ]
+              ],
+              "chunk_ids": [
+                "TD_2022_ANNUAL:p128:c0",
+                "TD_2023_ANNUAL:p129:c1",
+                "TD_2022_ANNUAL:p198:c0",
+                "TD_2023_ANNUAL:p129:c0",
+                "TD_2023_ANNUAL:p198:c0"
+              ]
+            },
+            {
+              "seconds": 0.011300667014438659,
+              "pages": [
+                [
+                  "BMO_2023_ANNUAL",
+                  62
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  62
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  9
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  62
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  23
+                ]
+              ],
+              "chunk_ids": [
+                "BMO_2023_ANNUAL:p62:c1",
+                "BMO_2023_ANNUAL:p62:c3",
+                "TD_2023_ANNUAL:p9:c1",
+                "BMO_2023_ANNUAL:p62:c2",
+                "TD_2022_ANNUAL:p23:c3"
+              ]
+            },
+            {
+              "seconds": 0.012813915964215994,
+              "pages": [
+                [
+                  "TD_2023_ANNUAL",
+                  221
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  24
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  27
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  75
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  131
+                ]
+              ],
+              "chunk_ids": [
+                "TD_2023_ANNUAL:p221:c3",
+                "BMO_2022_ANNUAL:p24:c1",
+                "BMO_2023_ANNUAL:p27:c0",
+                "BMO_2023_ANNUAL:p75:c0",
+                "TD_2022_ANNUAL:p131:c2"
+              ]
+            },
+            {
+              "seconds": 0.011527125025168061,
+              "pages": [
+                [
+                  "BMO_2022_ANNUAL",
+                  211
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  62
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  62
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  62
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  28
+                ]
+              ],
+              "chunk_ids": [
+                "BMO_2022_ANNUAL:p211:c0",
+                "BMO_2023_ANNUAL:p62:c1",
+                "BMO_2023_ANNUAL:p62:c3",
+                "BMO_2023_ANNUAL:p62:c2",
+                "BMO_2022_ANNUAL:p28:c3"
+              ]
+            }
+          ]
+        }
+      ],
+      "identical_rankings": null,
+      "median_query_seconds": 0.011732749990187585
+    },
+    {
+      "strategy": "rerank",
+      "mode": "document",
+      "runs": [
+        {
+          "metrics": {
+            "retriever": "rerank",
+            "mode": "document",
+            "k": 5,
+            "evaluated": 6,
+            "skipped_missing_documents": 0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "page_recall": 0.0,
+            "ndcg": 0.0,
+            "limitation": "Page-level retrieval only; not answer accuracy or evidence-span support.",
+            "results": [
+              {
+                "id": "canadian-dev-rbc-2022",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "canadian-dev-rbc-2023",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "canadian-dev-td-2022",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "canadian-dev-td-2023",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "canadian-dev-bmo-2022",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "canadian-dev-bmo-2023",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              }
+            ]
+          },
+          "trace": [
+            {
+              "seconds": 4.297834583034273,
+              "pages": [
+                [
+                  "RBC_2022_ANNUAL",
+                  34
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  50
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  55
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  27
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  39
+                ]
+              ],
+              "chunk_ids": [
+                "RBC_2022_ANNUAL:p34:c1",
+                "RBC_2022_ANNUAL:p50:c1",
+                "RBC_2022_ANNUAL:p55:c1",
+                "RBC_2022_ANNUAL:p27:c1",
+                "RBC_2022_ANNUAL:p39:c0"
+              ]
+            },
+            {
+              "seconds": 3.5466974999872036,
+              "pages": [
+                [
+                  "RBC_2023_ANNUAL",
+                  127
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  179
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  232
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  180
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  177
+                ]
+              ],
+              "chunk_ids": [
+                "RBC_2023_ANNUAL:p127:c0",
+                "RBC_2023_ANNUAL:p179:c0",
+                "RBC_2023_ANNUAL:p232:c1",
+                "RBC_2023_ANNUAL:p180:c0",
+                "RBC_2023_ANNUAL:p177:c0"
+              ]
+            },
+            {
+              "seconds": 2.8541151249664836,
+              "pages": [
+                [
+                  "TD_2022_ANNUAL",
+                  128
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  198
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  54
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  55
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  199
+                ]
+              ],
+              "chunk_ids": [
+                "TD_2022_ANNUAL:p128:c1",
+                "TD_2022_ANNUAL:p198:c1",
+                "TD_2022_ANNUAL:p54:c0",
+                "TD_2022_ANNUAL:p55:c0",
+                "TD_2022_ANNUAL:p199:c0"
+              ]
+            },
+            {
+              "seconds": 3.785491957969498,
+              "pages": [
+                [
+                  "TD_2023_ANNUAL",
+                  54
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  29
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  33
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  34
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  26
+                ]
+              ],
+              "chunk_ids": [
+                "TD_2023_ANNUAL:p54:c0",
+                "TD_2023_ANNUAL:p29:c0",
+                "TD_2023_ANNUAL:p33:c0",
+                "TD_2023_ANNUAL:p34:c2",
+                "TD_2023_ANNUAL:p26:c1"
+              ]
+            },
+            {
+              "seconds": 3.1154079170082696,
+              "pages": [
+                [
+                  "BMO_2022_ANNUAL",
+                  24
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  69
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  196
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  134
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  70
+                ]
+              ],
+              "chunk_ids": [
+                "BMO_2022_ANNUAL:p24:c2",
+                "BMO_2022_ANNUAL:p69:c2",
+                "BMO_2022_ANNUAL:p196:c1",
+                "BMO_2022_ANNUAL:p134:c2",
+                "BMO_2022_ANNUAL:p70:c4"
+              ]
+            },
+            {
+              "seconds": 3.259157749998849,
+              "pages": [
+                [
+                  "BMO_2023_ANNUAL",
+                  32
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  62
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  53
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  37
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  64
+                ]
+              ],
+              "chunk_ids": [
+                "BMO_2023_ANNUAL:p32:c0",
+                "BMO_2023_ANNUAL:p62:c3",
+                "BMO_2023_ANNUAL:p53:c0",
+                "BMO_2023_ANNUAL:p37:c0",
+                "BMO_2023_ANNUAL:p64:c0"
+              ]
+            }
+          ]
+        }
+      ],
+      "identical_rankings": null,
+      "median_query_seconds": 3.4029276249930263
+    },
+    {
+      "strategy": "rerank",
+      "mode": "corpus",
+      "runs": [
+        {
+          "metrics": {
+            "retriever": "rerank",
+            "mode": "corpus",
+            "k": 5,
+            "evaluated": 6,
+            "skipped_missing_documents": 0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "page_recall": 0.0,
+            "ndcg": 0.0,
+            "limitation": "Page-level retrieval only; not answer accuracy or evidence-span support.",
+            "results": [
+              {
+                "id": "canadian-dev-rbc-2022",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "canadian-dev-rbc-2023",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "canadian-dev-td-2022",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "canadian-dev-td-2023",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "canadian-dev-bmo-2022",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "canadian-dev-bmo-2023",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              }
+            ]
+          },
+          "trace": [
+            {
+              "seconds": 2.898272124992218,
+              "pages": [
+                [
+                  "RBC_2022_ANNUAL",
+                  120
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  55
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  50
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  48
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  144
+                ]
+              ],
+              "chunk_ids": [
+                "RBC_2022_ANNUAL:p120:c0",
+                "RBC_2023_ANNUAL:p55:c1",
+                "RBC_2022_ANNUAL:p50:c1",
+                "RBC_2022_ANNUAL:p48:c1",
+                "RBC_2022_ANNUAL:p144:c2"
+              ]
+            },
+            {
+              "seconds": 3.457847249985207,
+              "pages": [
+                [
+                  "RBC_2022_ANNUAL",
+                  223
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  225
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  64
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  65
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  41
+                ]
+              ],
+              "chunk_ids": [
+                "RBC_2022_ANNUAL:p223:c3",
+                "RBC_2023_ANNUAL:p225:c2",
+                "TD_2022_ANNUAL:p64:c0",
+                "TD_2023_ANNUAL:p65:c0",
+                "BMO_2023_ANNUAL:p41:c0"
+              ]
+            },
+            {
+              "seconds": 3.0628204999957234,
+              "pages": [
+                [
+                  "TD_2022_ANNUAL",
+                  128
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  55
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  199
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  199
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  129
+                ]
+              ],
+              "chunk_ids": [
+                "TD_2022_ANNUAL:p128:c1",
+                "TD_2023_ANNUAL:p55:c0",
+                "TD_2023_ANNUAL:p199:c0",
+                "TD_2022_ANNUAL:p199:c0",
+                "TD_2023_ANNUAL:p129:c1"
+              ]
+            },
+            {
+              "seconds": 3.7081313749658875,
+              "pages": [
+                [
+                  "TD_2023_ANNUAL",
+                  33
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  54
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  53
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  28
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  32
+                ]
+              ],
+              "chunk_ids": [
+                "TD_2023_ANNUAL:p33:c0",
+                "TD_2023_ANNUAL:p54:c0",
+                "TD_2022_ANNUAL:p53:c0",
+                "TD_2023_ANNUAL:p28:c0",
+                "TD_2022_ANNUAL:p32:c0"
+              ]
+            },
+            {
+              "seconds": 3.1417971670161933,
+              "pages": [
+                [
+                  "BMO_2023_ANNUAL",
+                  27
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  221
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  71
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  71
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  24
+                ]
+              ],
+              "chunk_ids": [
+                "BMO_2023_ANNUAL:p27:c0",
+                "TD_2023_ANNUAL:p221:c3",
+                "TD_2022_ANNUAL:p71:c0",
+                "BMO_2022_ANNUAL:p71:c1",
+                "BMO_2022_ANNUAL:p24:c2"
+              ]
+            },
+            {
+              "seconds": 4.165800124988891,
+              "pages": [
+                [
+                  "BMO_2023_ANNUAL",
+                  62
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  144
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  28
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  32
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  60
+                ]
+              ],
+              "chunk_ids": [
+                "BMO_2023_ANNUAL:p62:c3",
+                "BMO_2023_ANNUAL:p144:c0",
+                "TD_2023_ANNUAL:p28:c0",
+                "BMO_2023_ANNUAL:p32:c1",
+                "BMO_2022_ANNUAL:p60:c2"
+              ]
+            }
+          ]
+        }
+      ],
+      "identical_rankings": null,
+      "median_query_seconds": 3.2998222085007
+    }
+  ],
+  "limitations": [
+    "Page retrieval is not answer accuracy.",
+    "Repeatability is measured on this local index and environment only.",
+    "Timing includes first-query model startup; not a production load test.",
+    "Dataset independence and split quality require separate review."
+  ]
+}

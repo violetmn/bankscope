@@ -10,10 +10,10 @@ from pathlib import Path
 ROOT = "https://raw.githubusercontent.com/patronus-ai/financebench/"
 
 
-def download(url, target, pdf=False):
+def download(url, target, pdf=False, user_agent="BankScope-research/0.1"):
     if target.exists():
         return
-    req = urllib.request.Request(url, headers={"User-Agent": "BankScope-research/0.1"})
+    req = urllib.request.Request(url, headers={"User-Agent": user_agent})
     with urllib.request.urlopen(req, timeout=60) as response:
         body = response.read(50_000_001)
     if len(body) > 50_000_000:
