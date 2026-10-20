@@ -32,7 +32,7 @@ class Query(BaseModel):
     year: int | None = None
     k: int = Field(default=5, ge=1, le=10)
     generate_answer: bool = False
-    strategy: str = Field(default="auto", pattern="^(auto|bm25|dense|hybrid|rerank|focused)$")
+    strategy: str = Field(default="auto", pattern="^(auto|bm25|dense|hybrid|rerank|focused|financial)$")
 
     @field_validator("question")
     @classmethod
@@ -50,7 +50,10 @@ def health():
 
 def default_strategy(store):
     if ready(store):
-        return "rerank" if reranker_ready() else "dense"
+        if reranker_ready():
+            has_pages = store.db.execute('SELECT 1 FROM page_contexts LIMIT 1').fetchone() is not None
+            return 'financial' if has_pages else 'rerank'
+        return 'dense'
     return "bm25"
 
 

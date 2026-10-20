@@ -54,3 +54,14 @@ enabled and capped locally; the cap is not an account-wide dollar budget.
 The application currently runs locally without production authentication. Public
 hosting requires access control, rate limits, provider-budget controls, secure
 secret storage and deployment verification.
+
+
+## Numerical page context
+
+Ingestion retains line-level `page_contexts` alongside embedded passages. Existing
+indexes can backfill these pages after verifying their source PDF hashes. The
+`financial` route selects supported numerical rows from financial-highlights and
+consolidated-statement pages with years and units, then fills the remaining slots
+using ordinary retrieval. It uses no diagnostic labels or answers. Page contexts
+have a separate fingerprint in new experiment records. Table excerpts remain
+unverified evidence; the existing checked-table calculation path is separate.

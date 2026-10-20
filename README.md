@@ -29,12 +29,17 @@ and checking selected deposit tables with reproducible calculations.
 
 ![RBC evidence search](docs/images/canadian-banks.png)
 
+**Numerical evidence** — RBC credit losses with the source table’s years and units.
+
+![Numerical source-table retrieval](docs/images/numerical-retrieval.png)
+
 </details>
 
 ## Features
 
 - **Cited research:** search by company and reporting year, then inspect the original PDF page.
 - **Multi-stage retrieval:** BM25, dense search, hybrid fusion, and cross-encoder reranking.
+- **Numerical evidence:** table-aware row retrieval with source headings, period columns, units and page citations.
 - **Checked financial tables:** reconcile supported deposit categories and calculate changes with Decimal arithmetic.
 - **Optional AI answers:** GPT-4o mini drafts with citation checks and a local request cap.
 - **Reproducible evaluation:** retrieval metrics, per-query traces, corpus fingerprints, and recorded failures.
@@ -77,13 +82,14 @@ The expanded local corpus contains **9 reports, 2,315 pages, and 7,687 passages*
 American Express (2022), plus JPMorgan Chase, RBC, TD, and BMO (2022-2023).
 [Download and index the curated reports](docs/SETUP.md#add-jpmorgan-chase-and-canadian-bank-reports)
 to reproduce the expansion. PDFs and vector indexes remain local.
-The six-question numerical development check missed its selected reference pages
-with both BM25 and reranking; [results and limitations](reports/validation/CANADIAN_EXPANSION.md)
-are recorded. New banks support evidence search, with checked-table adapters pending.
+The new table-aware route finds all 14 selected reference pages in a small numerical
+development check, improving the original Canadian questions from 0/6 to 6/6.
+[Results and limits](reports/validation/NUMERICAL_RETRIEVAL.md) are recorded; this
+is retrieval evidence, not validated answer accuracy or checked calculations.
 
 ## Evaluation
 
-**200 passing tests · approximately 85% combined statement/branch coverage** in the
+**236 passing tests · approximately 86% combined statement/branch coverage** in the
 latest local run. These measure software checks, not financial-answer accuracy.
 
 Reference-page retrieval on a **12-question development pilot** across five reports:

@@ -25,7 +25,7 @@ async function initialize() {
       $('library').append(card);
     }
     if(!documents.length) { $('library').append(el('p','No reports have been added yet.','muted')); $('submit').disabled=true; setStatus('Add a report with the ingestion command before searching.'); }
-    $('search-badge').textContent=capabilities.default_strategy==='rerank'?'● Semantic search + reranking':capabilities.semantic_ready?'● Semantic search ready':'● Keyword search ready';
+    $('search-badge').textContent=capabilities.default_strategy==='financial'?'● Table-aware + semantic search':capabilities.default_strategy==='rerank'?'● Semantic search + reranking':capabilities.semantic_ready?'● Semantic search ready':'● Keyword search ready';
     $('generation-option').hidden=!capabilities.generation_enabled;
   } catch(error) { setStatus(error.message,true); $('submit').disabled=true; $('search-badge').textContent='Search unavailable'; }
 }
@@ -38,6 +38,7 @@ function renderSources(hits) {
       const link=el('a',`Open PDF page ${hit.page} ↗`); link.href=hit.source_url;link.target='_blank';link.rel='noopener noreferrer'; heading.append(link);
     }
     card.append(heading,el('div',hit.citation,'source-context'));
+    if(hit.source_kind==='financial_table_excerpt') card.append(el('p','Source table excerpt · verify year, units and row labels.','table-caption'));
     const text=hit.text, preview=text.length>550?text.slice(0,550)+'…':text;
     card.append(el('p',preview,'source-text'));
     if(text.length>550) { const details=el('details'),summary=el('summary','Read full passage'); details.append(summary,el('p',text,'source-text'));card.append(details); }

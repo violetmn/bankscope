@@ -7,7 +7,10 @@ import numpy as np
 from bankscope.semantic import MODEL,encoder,reranker,ready,reranker_ready,distinct_pages
 
 ALIASES={'american express':('american express','amex'),
-         'jpmorgan':('jpmorgan chase','jpmorgan','j.p. morgan','jpm')}
+         'jpmorgan':('jpmorgan chase','jpmorgan','j.p. morgan','jpm'),
+         'royal bank of canada':('royal bank of canada','rbc'),
+         'td bank':('td bank group','toronto-dominion bank','td bank','td'),
+         'bank of montreal':('bank of montreal','bmo')}
 
 
 def aliases(company):

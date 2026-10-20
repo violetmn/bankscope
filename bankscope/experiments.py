@@ -20,6 +20,14 @@ def fingerprint(store):
     return digest.hexdigest()
 
 
+def page_context_fingerprint(store):
+    digest = hashlib.sha256()
+    for row in store.db.execute('SELECT doc_id,page,text FROM page_contexts ORDER BY doc_id,page'):
+        digest.update(json.dumps(list(row), ensure_ascii=False).encode())
+        digest.update(b'\n')
+    return digest.hexdigest()
+
+
 class RecordingStore:
     def __init__(self, store):
         self.store = store
@@ -40,12 +48,13 @@ class RecordingStore:
 def run(store, questions, strategies=('bm25',), modes=('document','corpus'), repeats=2, k=5):
     if not 1 <= repeats <= 10:
         raise ValueError('repeats must be between 1 and 10')
-    if not strategies or set(strategies)-{'bm25','dense','hybrid','rerank','focused'}:
+    if not strategies or set(strategies)-{'bm25','dense','hybrid','rerank','focused','financial'}:
         raise ValueError('Choose valid retrieval strategies')
     if not modes or set(modes)-{'document','corpus'}:
         raise ValueError('Choose document or corpus modes')
     results=[]
     corpus_sha = fingerprint(store)
+    pages_sha = page_context_fingerprint(store)
     for strategy in strategies:
         for mode in modes:
             runs=[]
@@ -58,7 +67,7 @@ def run(store, questions, strategies=('bm25',), modes=('document','corpus'), rep
             results.append({'strategy':strategy,'mode':mode,'runs':runs,
                             'identical_rankings':all(x==signatures[0] for x in signatures) if repeats>1 else None,
                             'median_query_seconds':statistics.median(times) if times else None})
-    if fingerprint(store)!=corpus_sha:
+    if fingerprint(store)!=corpus_sha or page_context_fingerprint(store)!=pages_sha:
         raise ValueError('Corpus changed during experiment; discard this run')
     return {'schema_version':1,'created_utc':datetime.now(timezone.utc).isoformat(),
             'python':platform.python_version(),'paid_calls':0,
@@ -68,7 +77,7 @@ def run(store, questions, strategies=('bm25',), modes=('document','corpus'), rep
                                    'reranker':'Xenova/ms-marco-MiniLM-L-6-v2',
                                    'note':'Configured identifiers; model weights are not fingerprinted.'},
             'questions_sha256':hashlib.sha256(Path(questions).read_bytes()).hexdigest(),
-            'corpus_passages_sha256':corpus_sha,'documents':store.documents(),
+            'corpus_passages_sha256':corpus_sha,'source_page_contexts_sha256':pages_sha,'documents':store.documents(),
             'k':k,'repeats':repeats,'results':results,
             'limitations':['Page retrieval is not answer accuracy.',
                           'Repeatability is measured on this local index and environment only.',

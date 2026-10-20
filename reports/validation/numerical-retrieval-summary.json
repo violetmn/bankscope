@@ -1,0 +1,241 @@
+{
+  "date": "2026-10-20",
+  "tests_passed": 236,
+  "coverage": {
+    "covered_lines": 1013,
+    "num_statements": 1171,
+    "percent_covered": 85.94990836896763,
+    "percent_covered_display": "86",
+    "missing_lines": 158,
+    "excluded_lines": 0,
+    "percent_statements_covered": 86.5072587532024,
+    "percent_statements_covered_display": "87",
+    "num_branches": 466,
+    "num_partial_branches": 48,
+    "covered_branches": 394,
+    "missing_branches": 72,
+    "percent_branches_covered": 84.54935622317596,
+    "percent_branches_covered_display": "85"
+  },
+  "paid_calls": 0,
+  "reports": 9,
+  "pages": 2315,
+  "passages": 7687,
+  "vectors": 7687,
+  "passages_sha256": "17e01c066c6f1ffba24b74da99fa97eff93c44b61cc81c674f1fe347461240b5",
+  "source_page_contexts_sha256": "d952a52616791f43a6893352fe831eb0d0036889e5bbaefd442e079d06f34174",
+  "final_experiment": "reports/experiments/numerical-release-verified/run.json",
+  "source_question_files": [
+    "datasets/canadian_bank_diagnostics.jsonl",
+    "datasets/numerical_additional_checks.jsonl"
+  ],
+  "jpm_identical_rankings": {
+    "document": true,
+    "corpus": true
+  },
+  "evidence_context_checks": [
+    {
+      "id": "canadian-dev-rbc-2022",
+      "mode": "document",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "canadian-dev-rbc-2023",
+      "mode": "document",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "canadian-dev-td-2022",
+      "mode": "document",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "canadian-dev-td-2023",
+      "mode": "document",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "canadian-dev-bmo-2022",
+      "mode": "document",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "canadian-dev-bmo-2023",
+      "mode": "document",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "numeric-check-rbc-netincome-2022",
+      "mode": "document",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "numeric-check-rbc-deposits-2023",
+      "mode": "document",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "numeric-check-td-adjusted-2022",
+      "mode": "document",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "numeric-check-td-cet1-2023",
+      "mode": "document",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "numeric-check-bmo-income-2022",
+      "mode": "document",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "numeric-check-bmo-assets-2023",
+      "mode": "document",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "numeric-check-amex-assets-2022",
+      "mode": "document",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "numeric-check-jpm-assets-2023",
+      "mode": "document",
+      "reference_page_rank": 4,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "canadian-dev-rbc-2022",
+      "mode": "corpus",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "canadian-dev-rbc-2023",
+      "mode": "corpus",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "canadian-dev-td-2022",
+      "mode": "corpus",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "canadian-dev-td-2023",
+      "mode": "corpus",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "canadian-dev-bmo-2022",
+      "mode": "corpus",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "canadian-dev-bmo-2023",
+      "mode": "corpus",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "numeric-check-rbc-netincome-2022",
+      "mode": "corpus",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "numeric-check-rbc-deposits-2023",
+      "mode": "corpus",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "numeric-check-td-adjusted-2022",
+      "mode": "corpus",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "numeric-check-td-cet1-2023",
+      "mode": "corpus",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "numeric-check-bmo-income-2022",
+      "mode": "corpus",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "numeric-check-bmo-assets-2023",
+      "mode": "corpus",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "numeric-check-amex-assets-2022",
+      "mode": "corpus",
+      "reference_page_rank": 1,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    },
+    {
+      "id": "numeric-check-jpm-assets-2023",
+      "mode": "corpus",
+      "reference_page_rank": 4,
+      "reference_value_in_returned_text": true,
+      "requested_year_in_returned_text": true
+    }
+  ],
+  "limits": [
+    "Development questions informed implementation; not held-out or independent validation.",
+    "Value/year string presence is not entailment or correct column alignment.",
+    "No new checked calculations or scored provider answers.",
+    "Quarterly, segment and average measures use the existing retriever.",
+    "The final release run was executed once; an earlier six-question version was repeated twice."
+  ]
+}

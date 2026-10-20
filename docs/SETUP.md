@@ -12,9 +12,26 @@ bankscope prepare-reranker
 ```
 
 These commands download free model weights. Queries thereafter use cached local
-models. The API selects the standard reranker when prepared, dense search when
-only vectors are ready, and BM25 otherwise. Reingestion invalidates vectors and
+models. The API selects the table-aware `financial` route when embeddings, the
+reranker and source page contexts are ready. It uses standard reranking without
+page contexts, dense search with vectors only, and BM25 otherwise. Reingestion invalidates vectors and
 structured tables; prepare them again afterward. Unchanged vectors are reused.
+
+## Prepare numerical source-page retrieval
+
+For an existing index:
+
+```sh
+bankscope prepare-page-contexts
+bankscope ask 'What was RBC provision for credit losses in fiscal 2023?' \
+  --company 'Royal Bank of Canada' --year 2023 --strategy financial
+```
+
+Backfill verifies source hashes and preserves existing vectors and checked tables.
+New ingestions retain line-level pages automatically. Supported metric queries
+prioritize financial table excerpts with year/unit context; unsupported questions
+fall back to ordinary retrieval. These are **unverified source excerpts**, not
+checked financial answers. [Measured results and limits](../reports/validation/NUMERICAL_RETRIEVAL.md).
 
 ## Enable the checked American Express table
 

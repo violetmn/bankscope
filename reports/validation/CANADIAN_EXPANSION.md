@@ -72,3 +72,8 @@ python -m bankscope.experiments \
 The output directory must be new. Original benchmark runs remain tied to their
 original corpus snapshots. The Canadian reports currently support evidence
 search; no new checked-table adapters or validated generated answers are claimed.
+
+## Follow-up
+
+These initial misses are retained as the baseline. The [numerical retrieval fix](NUMERICAL_RETRIEVAL.md)
+records the subsequent page-context method, additional checks and current limitations.

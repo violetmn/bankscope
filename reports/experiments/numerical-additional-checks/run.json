@@ -1,0 +1,1469 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-20T17:31:37.985947+00:00",
+  "python": "3.14.6",
+  "paid_calls": 0,
+  "implementation_sha256": {
+    "__init__.py": "a736d57893d495b548be01fd6402b5713dc251bd403c4d2684c9d3cbcc42f272",
+    "answer_checks.py": "1ed518f2e07449681985d324f54ab748fbe98ba83060e592b860f6d93595957f",
+    "answer_evaluation.py": "d91284406aacb6fcb9e7c23f357688c98a97232ad95bfa66a7bb08d826aa304b",
+    "api.py": "d074d4ada79e3393cdd052b2e6a84d4eec8e606a91cdcd9a62ea112a4078093c",
+    "cli.py": "dacfd3b8d963edec3d272b7f7bdc3fc168bcec055dfff4adea6db50bc4fdc588",
+    "config.py": "021b934fd7227a92083ec17a624350bd46e36f75d840f5cb4d6053fa5accd53e",
+    "evaluation.py": "e23ed5905a2a38fa729b7fb50cd3142d09b73d6460ce96c95bd0a4ef97a30e8f",
+    "experiments.py": "1a5b2037dc54e170c31ea890eec2fc5b1e04bdab45c3bfd76786ccd70f62d71b",
+    "files.py": "6d9310e8cfb5ef51196303743e667c666e5ab4110f255a1bc6c58d9f584afb60",
+    "financial_retrieval.py": "7855fe18f32c12cf4d679aafee2ac10dbc442de2bd6adfcde7f39c25bec3040c",
+    "focused_retrieval.py": "c14b13c9d41455362592acb5363279135a905034e83245282e5e85df7a504c6b",
+    "generation.py": "9b57b3d23e28352c59aec5690e01744e984e3be4c61cd3c116fb88d655088009",
+    "page_contexts.py": "1aa5c7d51c0783881ae24902301a645f30f359c552b4778a448d1aee588c44ea",
+    "scope_checks.py": "101d3bc05af54a05683a73b7fe43c6bfe562524d2da2a0a88fac637e384b549d",
+    "segment_tables.py": "2c46074179ea54340de353b2409833e0e9e6eb24e2527a26ae1647485f4f0457",
+    "semantic.py": "33751d32118493d81ffaeb81e4f48e8e3c0d94cc60b3e42c16cbaec83fd71305",
+    "store.py": "2c5cda72b685da3b8c08b87551aedb6d9af6650842c1ece8e73c9ddfb526118b",
+    "tables.py": "fe7f25c0201263901a414ea7840ab4515b26a4e2d47869c90ca75717e85cff3b"
+  },
+  "model_configuration": {
+    "embedding": "BAAI/bge-small-en-v1.5",
+    "reranker": "Xenova/ms-marco-MiniLM-L-6-v2",
+    "note": "Configured identifiers; model weights are not fingerprinted."
+  },
+  "questions_sha256": "383b72101d7d58f07d1678fb326f5f43fdb64bd82041c02fc918e8e03ed28427",
+  "corpus_passages_sha256": "17e01c066c6f1ffba24b74da99fa97eff93c44b61cc81c674f1fe347461240b5",
+  "documents": [
+    {
+      "id": "AMERICANEXPRESS_2022_10K",
+      "company": "American Express",
+      "year": 2022,
+      "url": "https://raw.githubusercontent.com/patronus-ai/financebench/main/pdfs/AMERICANEXPRESS_2022_10K.pdf",
+      "sha256": "d3bbc7ab23d6160e07eab50a359e4d68c40efff9fde3baa168e7c40e06f568e6",
+      "pages": 260
+    },
+    {
+      "id": "BMO_2022_ANNUAL",
+      "company": "Bank of Montreal",
+      "year": 2022,
+      "url": "https://www.bmo.com/ir/archive/en/bmo_ar2022.pdf",
+      "sha256": "05aab92f5a0096fa60f120dde8b037e12a43ea4934e3da2e8935628c7d881efe",
+      "pages": 215
+    },
+    {
+      "id": "BMO_2023_ANNUAL",
+      "company": "Bank of Montreal",
+      "year": 2023,
+      "url": "https://www.bmo.com/ir/archive/en/bmo_ar2023.pdf",
+      "sha256": "0c03aa46fded9f7f7aef4303dc9be023cac6bd941df931b5c846762c55adc934",
+      "pages": 220
+    },
+    {
+      "id": "JPMORGANCHASE_2022_ANNUAL",
+      "company": "JPMorgan Chase",
+      "year": 2022,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/annualreport-2022.pdf",
+      "sha256": "e2a82330efb82c9ab38b30cd043fa59c0c4b7debb5108559ce3c788bbe7942c6",
+      "pages": 328
+    },
+    {
+      "id": "JPMORGANCHASE_2023_ANNUAL",
+      "company": "JPMorgan Chase",
+      "year": 2023,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/annualreport-2023.pdf",
+      "sha256": "bebb7c4abb278396187cadcac8006951ffcee7dde7c7b458ef364befacbd8908",
+      "pages": 364
+    },
+    {
+      "id": "RBC_2022_ANNUAL",
+      "company": "Royal Bank of Canada",
+      "year": 2022,
+      "url": "https://www.rbc.com/investor-relations/_assets-custom/pdf/ar_2022_e.pdf",
+      "sha256": "6d83af4a687f2b947c0edaebeb1342ce94e7dcc0449145c4a23c992424ecf640",
+      "pages": 235
+    },
+    {
+      "id": "RBC_2023_ANNUAL",
+      "company": "Royal Bank of Canada",
+      "year": 2023,
+      "url": "https://www.rbc.com/investor-relations/_assets-custom/pdf/ar_2023_e.pdf",
+      "sha256": "e397264e0830325a8b99c6b93339a726f96b4a4898627cf75241a161b5f793c6",
+      "pages": 237
+    },
+    {
+      "id": "TD_2022_ANNUAL",
+      "company": "TD Bank",
+      "year": 2022,
+      "url": "https://www.td.com/document/PDF/ar2022/ar2022-Complete-Report.pdf",
+      "sha256": "cdef48e9d8f91f8565ad77636eb75fd19a32dd53b82e9929f29b45557481d6bb",
+      "pages": 228
+    },
+    {
+      "id": "TD_2023_ANNUAL",
+      "company": "TD Bank",
+      "year": 2023,
+      "url": "https://www.td.com/document/PDF/ar2023/ar2023-Complete-Report.pdf",
+      "sha256": "704a646626776c1e744aec9f99e539d34acc74ea4f0e81fc8a9c733675173918",
+      "pages": 228
+    }
+  ],
+  "k": 5,
+  "repeats": 1,
+  "results": [
+    {
+      "strategy": "rerank",
+      "mode": "document",
+      "runs": [
+        {
+          "metrics": {
+            "retriever": "rerank",
+            "mode": "document",
+            "k": 5,
+            "evaluated": 8,
+            "skipped_missing_documents": 0,
+            "hit_rate": 0.25,
+            "mrr": 0.125,
+            "page_recall": 0.25,
+            "ndcg": 0.15773243839286438,
+            "limitation": "Page-level retrieval only; not answer accuracy or evidence-span support.",
+            "results": [
+              {
+                "id": "numeric-check-rbc-netincome-2022",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "numeric-check-rbc-deposits-2023",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "numeric-check-td-adjusted-2022",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "numeric-check-td-cet1-2023",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "numeric-check-bmo-income-2022",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "numeric-check-bmo-assets-2023",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "numeric-check-amex-assets-2022",
+                "hit": 1,
+                "rr": 0.5,
+                "recall": 1.0,
+                "ndcg": 0.6309297535714575
+              },
+              {
+                "id": "numeric-check-jpm-assets-2023",
+                "hit": 1,
+                "rr": 0.5,
+                "recall": 1.0,
+                "ndcg": 0.6309297535714575
+              }
+            ]
+          },
+          "trace": [
+            {
+              "seconds": 3.6198262500111014,
+              "pages": [
+                [
+                  "RBC_2022_ANNUAL",
+                  100
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  20
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  80
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  11
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  34
+                ]
+              ],
+              "chunk_ids": [
+                "RBC_2022_ANNUAL:p100:c2",
+                "RBC_2022_ANNUAL:p20:c0",
+                "RBC_2022_ANNUAL:p80:c0",
+                "RBC_2022_ANNUAL:p11:c2",
+                "RBC_2022_ANNUAL:p34:c1"
+              ]
+            },
+            {
+              "seconds": 3.066279083956033,
+              "pages": [
+                [
+                  "RBC_2023_ANNUAL",
+                  6
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  60
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  22
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  187
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  48
+                ]
+              ],
+              "chunk_ids": [
+                "RBC_2023_ANNUAL:p6:c2",
+                "RBC_2023_ANNUAL:p60:c1",
+                "RBC_2023_ANNUAL:p22:c0",
+                "RBC_2023_ANNUAL:p187:c2",
+                "RBC_2023_ANNUAL:p48:c1"
+              ]
+            },
+            {
+              "seconds": 3.288698290998582,
+              "pages": [
+                [
+                  "TD_2022_ANNUAL",
+                  53
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  44
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  32
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  28
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  27
+                ]
+              ],
+              "chunk_ids": [
+                "TD_2022_ANNUAL:p53:c0",
+                "TD_2022_ANNUAL:p44:c0",
+                "TD_2022_ANNUAL:p32:c0",
+                "TD_2022_ANNUAL:p28:c0",
+                "TD_2022_ANNUAL:p27:c0"
+              ]
+            },
+            {
+              "seconds": 2.8710243750247173,
+              "pages": [
+                [
+                  "TD_2023_ANNUAL",
+                  133
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  69
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  4
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  72
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  132
+                ]
+              ],
+              "chunk_ids": [
+                "TD_2023_ANNUAL:p133:c5",
+                "TD_2023_ANNUAL:p69:c0",
+                "TD_2023_ANNUAL:p4:c1",
+                "TD_2023_ANNUAL:p72:c0",
+                "TD_2023_ANNUAL:p132:c3"
+              ]
+            },
+            {
+              "seconds": 3.4097318329731934,
+              "pages": [
+                [
+                  "BMO_2022_ANNUAL",
+                  28
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  58
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  54
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  64
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  34
+                ]
+              ],
+              "chunk_ids": [
+                "BMO_2022_ANNUAL:p28:c4",
+                "BMO_2022_ANNUAL:p58:c0",
+                "BMO_2022_ANNUAL:p54:c0",
+                "BMO_2022_ANNUAL:p64:c0",
+                "BMO_2022_ANNUAL:p34:c3"
+              ]
+            },
+            {
+              "seconds": 3.1161121249897406,
+              "pages": [
+                [
+                  "BMO_2023_ANNUAL",
+                  104
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  105
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  186
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  187
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  93
+                ]
+              ],
+              "chunk_ids": [
+                "BMO_2023_ANNUAL:p104:c0",
+                "BMO_2023_ANNUAL:p105:c1",
+                "BMO_2023_ANNUAL:p186:c0",
+                "BMO_2023_ANNUAL:p187:c3",
+                "BMO_2023_ANNUAL:p93:c0"
+              ]
+            },
+            {
+              "seconds": 2.7117970840190537,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  121
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  98
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  169
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  147
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  156
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p121:c0",
+                "AMERICANEXPRESS_2022_10K:p98:c0",
+                "AMERICANEXPRESS_2022_10K:p169:c0",
+                "AMERICANEXPRESS_2022_10K:p147:c0",
+                "AMERICANEXPRESS_2022_10K:p156:c0"
+              ]
+            },
+            {
+              "seconds": 3.7551140830037184,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  231
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  206
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  108
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  112
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  218
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2023_ANNUAL:p231:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p206:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p108:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p112:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p218:c0"
+              ]
+            }
+          ]
+        }
+      ],
+      "identical_rankings": null,
+      "median_query_seconds": 3.202405207994161
+    },
+    {
+      "strategy": "rerank",
+      "mode": "corpus",
+      "runs": [
+        {
+          "metrics": {
+            "retriever": "rerank",
+            "mode": "corpus",
+            "k": 5,
+            "evaluated": 8,
+            "skipped_missing_documents": 0,
+            "hit_rate": 0.0,
+            "mrr": 0.0,
+            "page_recall": 0.0,
+            "ndcg": 0.0,
+            "limitation": "Page-level retrieval only; not answer accuracy or evidence-span support.",
+            "results": [
+              {
+                "id": "numeric-check-rbc-netincome-2022",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "numeric-check-rbc-deposits-2023",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "numeric-check-td-adjusted-2022",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "numeric-check-td-cet1-2023",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "numeric-check-bmo-income-2022",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "numeric-check-bmo-assets-2023",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "numeric-check-amex-assets-2022",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "numeric-check-jpm-assets-2023",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              }
+            ]
+          },
+          "trace": [
+            {
+              "seconds": 3.966864791989792,
+              "pages": [
+                [
+                  "RBC_2023_ANNUAL",
+                  46
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  42
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  32
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  28
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  45
+                ]
+              ],
+              "chunk_ids": [
+                "RBC_2023_ANNUAL:p46:c0",
+                "BMO_2022_ANNUAL:p42:c3",
+                "BMO_2023_ANNUAL:p32:c1",
+                "BMO_2022_ANNUAL:p28:c3",
+                "BMO_2023_ANNUAL:p45:c1"
+              ]
+            },
+            {
+              "seconds": 3.2018639579764567,
+              "pages": [
+                [
+                  "RBC_2023_ANNUAL",
+                  10
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  125
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  48
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  25
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  223
+                ]
+              ],
+              "chunk_ids": [
+                "RBC_2023_ANNUAL:p10:c0",
+                "BMO_2023_ANNUAL:p125:c3",
+                "RBC_2023_ANNUAL:p48:c1",
+                "RBC_2022_ANNUAL:p25:c5",
+                "TD_2023_ANNUAL:p223:c2"
+              ]
+            },
+            {
+              "seconds": 3.8050604589516297,
+              "pages": [
+                [
+                  "TD_2022_ANNUAL",
+                  53
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  54
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  32
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  33
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  27
+                ]
+              ],
+              "chunk_ids": [
+                "TD_2022_ANNUAL:p53:c0",
+                "TD_2023_ANNUAL:p54:c0",
+                "TD_2022_ANNUAL:p32:c0",
+                "TD_2023_ANNUAL:p33:c0",
+                "TD_2022_ANNUAL:p27:c0"
+              ]
+            },
+            {
+              "seconds": 3.4837182920309715,
+              "pages": [
+                [
+                  "TD_2022_ANNUAL",
+                  71
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  4
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  72
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  69
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  27
+                ]
+              ],
+              "chunk_ids": [
+                "TD_2022_ANNUAL:p71:c0",
+                "TD_2023_ANNUAL:p4:c1",
+                "TD_2023_ANNUAL:p72:c0",
+                "TD_2023_ANNUAL:p69:c0",
+                "BMO_2023_ANNUAL:p27:c0"
+              ]
+            },
+            {
+              "seconds": 3.4451315000187606,
+              "pages": [
+                [
+                  "BMO_2022_ANNUAL",
+                  28
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  78
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  32
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  96
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  74
+                ]
+              ],
+              "chunk_ids": [
+                "BMO_2022_ANNUAL:p28:c4",
+                "BMO_2023_ANNUAL:p78:c0",
+                "BMO_2023_ANNUAL:p32:c3",
+                "BMO_2022_ANNUAL:p96:c4",
+                "BMO_2022_ANNUAL:p74:c0"
+              ]
+            },
+            {
+              "seconds": 3.3279947089613415,
+              "pages": [
+                [
+                  "BMO_2023_ANNUAL",
+                  104
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  105
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  187
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  202
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  75
+                ]
+              ],
+              "chunk_ids": [
+                "BMO_2023_ANNUAL:p104:c0",
+                "BMO_2023_ANNUAL:p105:c1",
+                "BMO_2023_ANNUAL:p187:c3",
+                "BMO_2022_ANNUAL:p202:c2",
+                "BMO_2023_ANNUAL:p75:c2"
+              ]
+            },
+            {
+              "seconds": 3.4281276669935323,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  126
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  65
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  5
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  252
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  139
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p126:c0",
+                "AMERICANEXPRESS_2022_10K:p65:c0",
+                "AMERICANEXPRESS_2022_10K:p5:c2",
+                "AMERICANEXPRESS_2022_10K:p252:c0",
+                "AMERICANEXPRESS_2022_10K:p139:c0"
+              ]
+            },
+            {
+              "seconds": 3.7257577080163173,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  300
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  326
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  268
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  261
+                ],
+                [
+                  "JPMORGANCHASE_2022_ANNUAL",
+                  293
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2023_ANNUAL:p300:c3",
+                "JPMORGANCHASE_2023_ANNUAL:p326:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p268:c1",
+                "JPMORGANCHASE_2023_ANNUAL:p261:c1",
+                "JPMORGANCHASE_2022_ANNUAL:p293:c1"
+              ]
+            }
+          ]
+        }
+      ],
+      "identical_rankings": null,
+      "median_query_seconds": 3.464424896024866
+    },
+    {
+      "strategy": "financial",
+      "mode": "document",
+      "runs": [
+        {
+          "metrics": {
+            "retriever": "financial",
+            "mode": "document",
+            "k": 5,
+            "evaluated": 8,
+            "skipped_missing_documents": 0,
+            "hit_rate": 0.875,
+            "mrr": 0.78125,
+            "page_recall": 0.875,
+            "ndcg": 0.8038345697591741,
+            "limitation": "Page-level retrieval only; not answer accuracy or evidence-span support.",
+            "results": [
+              {
+                "id": "numeric-check-rbc-netincome-2022",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              },
+              {
+                "id": "numeric-check-rbc-deposits-2023",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "numeric-check-td-adjusted-2022",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              },
+              {
+                "id": "numeric-check-td-cet1-2023",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              },
+              {
+                "id": "numeric-check-bmo-income-2022",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              },
+              {
+                "id": "numeric-check-bmo-assets-2023",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              },
+              {
+                "id": "numeric-check-amex-assets-2022",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              },
+              {
+                "id": "numeric-check-jpm-assets-2023",
+                "hit": 1,
+                "rr": 0.25,
+                "recall": 1.0,
+                "ndcg": 0.43067655807339306
+              }
+            ]
+          },
+          "trace": [
+            {
+              "seconds": 2.917441708035767,
+              "pages": [
+                [
+                  "RBC_2022_ANNUAL",
+                  23
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  100
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  20
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  80
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  11
+                ]
+              ],
+              "chunk_ids": [
+                "RBC_2022_ANNUAL:p23:financial",
+                "RBC_2022_ANNUAL:p100:c2",
+                "RBC_2022_ANNUAL:p20:c0",
+                "RBC_2022_ANNUAL:p80:c0",
+                "RBC_2022_ANNUAL:p11:c2"
+              ]
+            },
+            {
+              "seconds": 3.1993437499622814,
+              "pages": [
+                [
+                  "RBC_2023_ANNUAL",
+                  122
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  6
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  60
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  22
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  187
+                ]
+              ],
+              "chunk_ids": [
+                "RBC_2023_ANNUAL:p122:financial",
+                "RBC_2023_ANNUAL:p6:c2",
+                "RBC_2023_ANNUAL:p60:c1",
+                "RBC_2023_ANNUAL:p22:c0",
+                "RBC_2023_ANNUAL:p187:c2"
+              ]
+            },
+            {
+              "seconds": 3.087088250031229,
+              "pages": [
+                [
+                  "TD_2022_ANNUAL",
+                  21
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  53
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  44
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  32
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  28
+                ]
+              ],
+              "chunk_ids": [
+                "TD_2022_ANNUAL:p21:financial",
+                "TD_2022_ANNUAL:p53:c0",
+                "TD_2022_ANNUAL:p44:c0",
+                "TD_2022_ANNUAL:p32:c0",
+                "TD_2022_ANNUAL:p28:c0"
+              ]
+            },
+            {
+              "seconds": 3.135849624988623,
+              "pages": [
+                [
+                  "TD_2023_ANNUAL",
+                  21
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  133
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  69
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  4
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  72
+                ]
+              ],
+              "chunk_ids": [
+                "TD_2023_ANNUAL:p21:financial",
+                "TD_2023_ANNUAL:p133:c5",
+                "TD_2023_ANNUAL:p69:c0",
+                "TD_2023_ANNUAL:p4:c1",
+                "TD_2023_ANNUAL:p72:c0"
+              ]
+            },
+            {
+              "seconds": 4.590468999987934,
+              "pages": [
+                [
+                  "BMO_2022_ANNUAL",
+                  26
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  124
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  28
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  58
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  54
+                ]
+              ],
+              "chunk_ids": [
+                "BMO_2022_ANNUAL:p26:financial",
+                "BMO_2022_ANNUAL:p124:financial",
+                "BMO_2022_ANNUAL:p28:c4",
+                "BMO_2022_ANNUAL:p58:c0",
+                "BMO_2022_ANNUAL:p54:c0"
+              ]
+            },
+            {
+              "seconds": 3.7691931250155903,
+              "pages": [
+                [
+                  "BMO_2023_ANNUAL",
+                  29
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  128
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  104
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  105
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  186
+                ]
+              ],
+              "chunk_ids": [
+                "BMO_2023_ANNUAL:p29:financial",
+                "BMO_2023_ANNUAL:p128:financial",
+                "BMO_2023_ANNUAL:p104:c0",
+                "BMO_2023_ANNUAL:p105:c1",
+                "BMO_2023_ANNUAL:p186:c0"
+              ]
+            },
+            {
+              "seconds": 2.881116791977547,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  98
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  154
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  121
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  169
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  147
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p98:financial",
+                "AMERICANEXPRESS_2022_10K:p154:financial",
+                "AMERICANEXPRESS_2022_10K:p121:c0",
+                "AMERICANEXPRESS_2022_10K:p169:c0",
+                "AMERICANEXPRESS_2022_10K:p147:c0"
+              ]
+            },
+            {
+              "seconds": 4.002384958032053,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  2
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  84
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  231
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  206
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  108
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2023_ANNUAL:p2:financial",
+                "JPMORGANCHASE_2023_ANNUAL:p84:financial",
+                "JPMORGANCHASE_2023_ANNUAL:p231:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p206:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p108:c0"
+              ]
+            }
+          ]
+        }
+      ],
+      "identical_rankings": null,
+      "median_query_seconds": 3.167596687475452
+    },
+    {
+      "strategy": "financial",
+      "mode": "corpus",
+      "runs": [
+        {
+          "metrics": {
+            "retriever": "financial",
+            "mode": "corpus",
+            "k": 5,
+            "evaluated": 8,
+            "skipped_missing_documents": 0,
+            "hit_rate": 0.875,
+            "mrr": 0.78125,
+            "page_recall": 0.875,
+            "ndcg": 0.8038345697591741,
+            "limitation": "Page-level retrieval only; not answer accuracy or evidence-span support.",
+            "results": [
+              {
+                "id": "numeric-check-rbc-netincome-2022",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              },
+              {
+                "id": "numeric-check-rbc-deposits-2023",
+                "hit": 0,
+                "rr": 0,
+                "recall": 0.0,
+                "ndcg": 0.0
+              },
+              {
+                "id": "numeric-check-td-adjusted-2022",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              },
+              {
+                "id": "numeric-check-td-cet1-2023",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              },
+              {
+                "id": "numeric-check-bmo-income-2022",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              },
+              {
+                "id": "numeric-check-bmo-assets-2023",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              },
+              {
+                "id": "numeric-check-amex-assets-2022",
+                "hit": 1,
+                "rr": 1.0,
+                "recall": 1.0,
+                "ndcg": 1.0
+              },
+              {
+                "id": "numeric-check-jpm-assets-2023",
+                "hit": 1,
+                "rr": 0.25,
+                "recall": 1.0,
+                "ndcg": 0.43067655807339306
+              }
+            ]
+          },
+          "trace": [
+            {
+              "seconds": 2.7968137499992736,
+              "pages": [
+                [
+                  "RBC_2022_ANNUAL",
+                  23
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  100
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  20
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  80
+                ],
+                [
+                  "RBC_2022_ANNUAL",
+                  11
+                ]
+              ],
+              "chunk_ids": [
+                "RBC_2022_ANNUAL:p23:financial",
+                "RBC_2022_ANNUAL:p100:c2",
+                "RBC_2022_ANNUAL:p20:c0",
+                "RBC_2022_ANNUAL:p80:c0",
+                "RBC_2022_ANNUAL:p11:c2"
+              ]
+            },
+            {
+              "seconds": 3.1022930829785764,
+              "pages": [
+                [
+                  "RBC_2023_ANNUAL",
+                  122
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  6
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  60
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  22
+                ],
+                [
+                  "RBC_2023_ANNUAL",
+                  187
+                ]
+              ],
+              "chunk_ids": [
+                "RBC_2023_ANNUAL:p122:financial",
+                "RBC_2023_ANNUAL:p6:c2",
+                "RBC_2023_ANNUAL:p60:c1",
+                "RBC_2023_ANNUAL:p22:c0",
+                "RBC_2023_ANNUAL:p187:c2"
+              ]
+            },
+            {
+              "seconds": 3.039575957984198,
+              "pages": [
+                [
+                  "TD_2022_ANNUAL",
+                  21
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  53
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  44
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  32
+                ],
+                [
+                  "TD_2022_ANNUAL",
+                  28
+                ]
+              ],
+              "chunk_ids": [
+                "TD_2022_ANNUAL:p21:financial",
+                "TD_2022_ANNUAL:p53:c0",
+                "TD_2022_ANNUAL:p44:c0",
+                "TD_2022_ANNUAL:p32:c0",
+                "TD_2022_ANNUAL:p28:c0"
+              ]
+            },
+            {
+              "seconds": 2.810445457987953,
+              "pages": [
+                [
+                  "TD_2023_ANNUAL",
+                  21
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  133
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  69
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  4
+                ],
+                [
+                  "TD_2023_ANNUAL",
+                  72
+                ]
+              ],
+              "chunk_ids": [
+                "TD_2023_ANNUAL:p21:financial",
+                "TD_2023_ANNUAL:p133:c5",
+                "TD_2023_ANNUAL:p69:c0",
+                "TD_2023_ANNUAL:p4:c1",
+                "TD_2023_ANNUAL:p72:c0"
+              ]
+            },
+            {
+              "seconds": 3.5028252089978196,
+              "pages": [
+                [
+                  "BMO_2022_ANNUAL",
+                  26
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  124
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  28
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  58
+                ],
+                [
+                  "BMO_2022_ANNUAL",
+                  54
+                ]
+              ],
+              "chunk_ids": [
+                "BMO_2022_ANNUAL:p26:financial",
+                "BMO_2022_ANNUAL:p124:financial",
+                "BMO_2022_ANNUAL:p28:c4",
+                "BMO_2022_ANNUAL:p58:c0",
+                "BMO_2022_ANNUAL:p54:c0"
+              ]
+            },
+            {
+              "seconds": 3.028578666970134,
+              "pages": [
+                [
+                  "BMO_2023_ANNUAL",
+                  29
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  128
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  104
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  105
+                ],
+                [
+                  "BMO_2023_ANNUAL",
+                  186
+                ]
+              ],
+              "chunk_ids": [
+                "BMO_2023_ANNUAL:p29:financial",
+                "BMO_2023_ANNUAL:p128:financial",
+                "BMO_2023_ANNUAL:p104:c0",
+                "BMO_2023_ANNUAL:p105:c1",
+                "BMO_2023_ANNUAL:p186:c0"
+              ]
+            },
+            {
+              "seconds": 3.144264333008323,
+              "pages": [
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  98
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  154
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  121
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  169
+                ],
+                [
+                  "AMERICANEXPRESS_2022_10K",
+                  147
+                ]
+              ],
+              "chunk_ids": [
+                "AMERICANEXPRESS_2022_10K:p98:financial",
+                "AMERICANEXPRESS_2022_10K:p154:financial",
+                "AMERICANEXPRESS_2022_10K:p121:c0",
+                "AMERICANEXPRESS_2022_10K:p169:c0",
+                "AMERICANEXPRESS_2022_10K:p147:c0"
+              ]
+            },
+            {
+              "seconds": 3.923681167012546,
+              "pages": [
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  2
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  84
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  231
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  206
+                ],
+                [
+                  "JPMORGANCHASE_2023_ANNUAL",
+                  108
+                ]
+              ],
+              "chunk_ids": [
+                "JPMORGANCHASE_2023_ANNUAL:p2:financial",
+                "JPMORGANCHASE_2023_ANNUAL:p84:financial",
+                "JPMORGANCHASE_2023_ANNUAL:p231:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p206:c0",
+                "JPMORGANCHASE_2023_ANNUAL:p108:c0"
+              ]
+            }
+          ]
+        }
+      ],
+      "identical_rankings": null,
+      "median_query_seconds": 3.070934520481387
+    }
+  ],
+  "limitations": [
+    "Page retrieval is not answer accuracy.",
+    "Repeatability is measured on this local index and environment only.",
+    "Timing includes first-query model startup; not a production load test.",
+    "Dataset independence and split quality require separate review."
+  ]
+}

@@ -30,6 +30,9 @@ class Store:
           CREATE TABLE IF NOT EXISTS embeddings (
             chunk_id TEXT PRIMARY KEY, model TEXT NOT NULL,
             text_sha256 TEXT NOT NULL, vector BLOB NOT NULL);
+          CREATE TABLE IF NOT EXISTS page_contexts (
+            doc_id TEXT NOT NULL, page INTEGER NOT NULL, text TEXT NOT NULL,
+            PRIMARY KEY(doc_id, page));
           CREATE TABLE IF NOT EXISTS report_tables (
             doc_id TEXT NOT NULL, table_id TEXT NOT NULL, data TEXT NOT NULL,
             PRIMARY KEY(doc_id, table_id));
@@ -45,11 +48,13 @@ class Store:
             raise ValueError("No extractable text; scanned PDFs need OCR (not implemented)")
         with self.db:
             self.db.execute("DELETE FROM report_tables WHERE doc_id=?", (doc_id,))
+            self.db.execute("DELETE FROM page_contexts WHERE doc_id=?", (doc_id,))
             self.db.execute("DELETE FROM embeddings WHERE chunk_id IN (SELECT chunk_id FROM passages WHERE doc_id=?)", (doc_id,))
             self.db.execute("DELETE FROM passages WHERE doc_id=?", (doc_id,))
             self.db.execute("INSERT OR REPLACE INTO documents VALUES(?,?,?,?,?,?)",
                             (doc_id, company, int(year), url, digest, len(pages)))
             for page, text in enumerate(pages, 1):
+                self.db.execute("INSERT INTO page_contexts VALUES(?,?,?)", (doc_id, page, text))
                 for index, passage in enumerate(chunks(text)):
                     self.db.execute("INSERT INTO passages VALUES(?,?,?,?)",
                                     (passage, doc_id, page, f"{doc_id}:p{page}:c{index}"))
@@ -86,8 +91,11 @@ class Store:
     def search(self, question, k=5, company=None, year=None, doc_id=None, strategy="bm25"):
         if not 1 <= k <= 20:
             raise ValueError("k must be between 1 and 20")
-        if strategy not in {"bm25", "dense", "hybrid", "rerank", "focused"}:
+        if strategy not in {"bm25", "dense", "hybrid", "rerank", "focused", "financial"}:
             raise ValueError("Unknown retrieval strategy")
+        if strategy == "financial":
+            from bankscope.financial_retrieval import search
+            return search(self, question, k, company, year, doc_id)
         if strategy == "focused":
             from bankscope.focused_retrieval import search
             return search(self, question, k, company, year, doc_id)

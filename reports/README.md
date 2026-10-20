@@ -4,13 +4,18 @@ Start here for measured results. Detailed evidence is grouped by purpose.
 
 ## Current results
 
-- **Software reliability:** 200 tests pass locally, approximately 85% combined
+- **Numerical retrieval:** the table-aware route finds all 14 selected reference
+  pages in development checks. The original six Canadian questions improved from
+  0/6 to 6/6; this is not independent or held-out answer validation.
+  [Details](validation/NUMERICAL_RETRIEVAL.md).
+
+- **Software reliability:** 236 tests pass locally, approximately 86% combined
   coverage. Provider behavior is mocked in tests; coverage is not answer accuracy.
 - **Retrieval:** on twelve inspected development questions across five complete
   reports, standard reranking finds 4/12 reference pages within a known report and
   2/12 across the corpus. The optional focused method finds 8/12 in both modes.
 - **Regression:** focused retrieval loses one prior deposit hit while gaining
-  another. It is slower and remains opt-in; the default has not changed.
+  another. It is slower and remains opt-in; the default general fallback remains standard reranking.
 - **AI answers:** twenty real-provider calls produced eight cited drafts and twelve
   withheld citation-validation outcomes. These are not correctness scores.
   Independent human scoring remains pending.
@@ -44,7 +49,9 @@ annotations, downloaded PDFs, provider answers, and usage ledgers remain local.
 ## Canadian-bank expansion
 
 The main corpus now contains nine reports and 2,315 pages. Six numerical development
-questions exposed selected-reference-page misses (0/6 Hit@5 for BM25 and reranking).
+questions initially exposed selected-reference-page misses (0/6 Hit@5 for BM25 and
+reranking). The [numerical retrieval follow-up](validation/NUMERICAL_RETRIEVAL.md)
+records the fix, additional development checks, and limitations.
 See the [expansion checks and limitations](validation/CANADIAN_EXPANSION.md),
 [corpus snapshot](provenance/canadian-expansion-manifest.json), and
 [retrieval run](experiments/canadian-expansion/comparison.md).

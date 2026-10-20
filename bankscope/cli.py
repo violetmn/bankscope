@@ -13,6 +13,7 @@ def main():
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("documents")
     sub.add_parser("embed")
+    sub.add_parser("prepare-page-contexts")
     sub.add_parser("prepare-reranker")
     tables = sub.add_parser("extract-deposits")
     tables.add_argument("path")
@@ -32,16 +33,19 @@ def main():
     ask.add_argument("--company")
     ask.add_argument("--year", type=int)
     ask.add_argument("--generate", action="store_true")
-    ask.add_argument("--strategy", choices=["bm25", "dense", "hybrid", "rerank", "focused"], default="bm25")
+    ask.add_argument("--strategy", choices=["bm25", "dense", "hybrid", "rerank", "focused", "financial"], default="bm25")
     ev = sub.add_parser("evaluate")
     ev.add_argument("--questions", default="data/financebench/financebench_open_source.jsonl")
     ev.add_argument("--mode", choices=["document", "corpus"], default="document")
     ev.add_argument("--k", type=int, default=5)
-    ev.add_argument("--strategy", choices=["bm25", "dense", "hybrid", "rerank", "focused"], default="bm25")
+    ev.add_argument("--strategy", choices=["bm25", "dense", "hybrid", "rerank", "focused", "financial"], default="bm25")
     args = parser.parse_args()
     store = Store(args.db)
     try:
-        if args.command == "ingest":
+        if args.command == "prepare-page-contexts":
+            from bankscope.page_contexts import prepare
+            result = prepare(store)
+        elif args.command == "ingest":
             result = store.ingest_pdf(args.path, args.id, args.company, args.year, args.url, args.extractor)
         elif args.command == "documents":
             result = store.documents()
